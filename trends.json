@@ -1,0 +1,473 @@
+{
+ "note": "实心点 = 来源直接公布的值；空心点 = 由下一期公布的涨跌额反推的值（分别计数）；缺失期不插补。有具体文章链接的点可点击打开，无链接的点暂未逐点核对出处。",
+ "series": [
+  {
+   "name": "SCFI 欧洲航线（基本港）",
+   "unit": "USD/40'",
+   "color": "#1f5eff",
+   "desc": "上海出口集装箱运价指数 · 上海→欧洲基本港 40' 现货",
+   "source": "上海航运交易所 SCFI，经工商时报 / 经济日报 / ETtoday / 自由财经每周转引",
+   "url": "https://www.ctee.com.tw/search/SCFI",
+   "caveat": "07-10、09-04 两点由下一期公布的“周跌额”反推，其余为直接公布值；09-24、09-30 为节假日调整发布日。",
+   "points": [
+    {
+     "date": "2026-06-12",
+     "value": 5018,
+     "derived": false
+    },
+    {
+     "date": "2026-06-19",
+     "value": 5132,
+     "derived": false
+    },
+    {
+     "date": "2026-06-26",
+     "value": 5766,
+     "derived": false
+    },
+    {
+     "date": "2026-07-03",
+     "value": 5797,
+     "derived": false
+    },
+    {
+     "date": "2026-07-10",
+     "value": 5616,
+     "note": "由 07-17 期公布的周跌额反推",
+     "derived": true
+    },
+    {
+     "date": "2026-07-17",
+     "value": 5422,
+     "derived": false
+    },
+    {
+     "date": "2026-07-24",
+     "value": 5247,
+     "derived": false
+    },
+    {
+     "date": "2026-07-31",
+     "value": 5053,
+     "derived": false
+    },
+    {
+     "date": "2026-08-07",
+     "value": 4934,
+     "derived": false
+    },
+    {
+     "date": "2026-08-14",
+     "value": 4811,
+     "derived": false
+    },
+    {
+     "date": "2026-08-21",
+     "value": 4663,
+     "derived": false
+    },
+    {
+     "date": "2026-08-28",
+     "value": 4321,
+     "derived": false
+    },
+    {
+     "date": "2026-09-04",
+     "value": 4218,
+     "note": "由 09-11 期公布的周跌额反推",
+     "derived": true
+    },
+    {
+     "date": "2026-09-11",
+     "value": 3938,
+     "derived": false
+    },
+    {
+     "date": "2026-09-18",
+     "value": 3683,
+     "derived": false
+    },
+    {
+     "date": "2026-09-24",
+     "value": 3547,
+     "derived": false
+    },
+    {
+     "date": "2026-09-30",
+     "value": 3378,
+     "derived": false
+    },
+    {
+     "date": "2026-10-09",
+     "value": 3455,
+     "derived": false
+    }
+   ],
+   "seriesUrlNote": "系列级出处为搜索页，非具体文章；逐点文章链接待补"
+  },
+  {
+   "name": "SCFI 地中海航线（基本港）",
+   "unit": "USD/40'",
+   "color": "#7c3aed",
+   "desc": "上海→地中海基本港 40' 现货（对应马赛/意大利海运行）",
+   "source": "上海航运交易所 SCFI，经工商时报等每周转引",
+   "url": "https://www.ctee.com.tw/search/SCFI",
+   "caveat": "07-10、09-04 两点由下一期公布的“周跌额”反推。",
+   "points": [
+    {
+     "date": "2026-06-12",
+     "value": 5968,
+     "derived": false
+    },
+    {
+     "date": "2026-06-19",
+     "value": 6134,
+     "derived": false
+    },
+    {
+     "date": "2026-06-26",
+     "value": 6900,
+     "derived": false
+    },
+    {
+     "date": "2026-07-03",
+     "value": 6985,
+     "derived": false
+    },
+    {
+     "date": "2026-07-10",
+     "value": 6655,
+     "note": "由 07-17 期公布的周跌额反推",
+     "derived": true
+    },
+    {
+     "date": "2026-07-17",
+     "value": 6358,
+     "derived": false
+    },
+    {
+     "date": "2026-07-24",
+     "value": 6160,
+     "derived": false
+    },
+    {
+     "date": "2026-07-31",
+     "value": 5913,
+     "derived": false
+    },
+    {
+     "date": "2026-08-07",
+     "value": 5730,
+     "derived": false
+    },
+    {
+     "date": "2026-08-14",
+     "value": 5457,
+     "derived": false
+    },
+    {
+     "date": "2026-08-21",
+     "value": 5094,
+     "derived": false
+    },
+    {
+     "date": "2026-08-28",
+     "value": 4664,
+     "derived": false
+    },
+    {
+     "date": "2026-09-04",
+     "value": 4527,
+     "note": "由 09-11 期公布的周跌额反推",
+     "derived": true
+    },
+    {
+     "date": "2026-09-11",
+     "value": 4304,
+     "derived": false
+    },
+    {
+     "date": "2026-09-18",
+     "value": 4074,
+     "derived": false
+    },
+    {
+     "date": "2026-09-24",
+     "value": 3916,
+     "derived": false
+    },
+    {
+     "date": "2026-09-30",
+     "value": 3771,
+     "derived": false
+    },
+    {
+     "date": "2026-10-09",
+     "value": 3790,
+     "derived": false
+    }
+   ],
+   "seriesUrlNote": "系列级出处为搜索页，非具体文章；逐点文章链接待补"
+  },
+  {
+   "name": "Freightos FAX 中国→北欧 空运",
+   "unit": "USD/kg",
+   "color": "#0ea5e9",
+   "desc": "Freightos Air Index 周均现货（China – N. Europe），对应欧洲空运行",
+   "source": "Freightos Weekly Update（freightos.com / AJOT / Air Freight News 转载）",
+   "url": "https://www.freightos.com/freight-resources/attacks-disrupt-saudi-air-cargo-china-europe-air-rates-slump-october-13-2026-update/",
+   "caveat": "日期为周报发布日，数值为前一周均值；与表内 FAX CN-EU 页面当期值 4.71（全欧口径、滚动 7 日）口径不同，不可直接比较。",
+   "points": [
+    {
+     "date": "2026-06-16",
+     "value": 4.62,
+     "derived": false
+    },
+    {
+     "date": "2026-06-23",
+     "value": 4.62,
+     "derived": false
+    },
+    {
+     "date": "2026-06-30",
+     "value": 4.55,
+     "derived": false
+    },
+    {
+     "date": "2026-07-08",
+     "value": 4.21,
+     "derived": false
+    },
+    {
+     "date": "2026-07-21",
+     "value": 4.25,
+     "derived": false
+    },
+    {
+     "date": "2026-07-29",
+     "value": 3.84,
+     "derived": false
+    },
+    {
+     "date": "2026-08-06",
+     "value": 4.02,
+     "derived": false
+    },
+    {
+     "date": "2026-08-18",
+     "value": 4.45,
+     "derived": false
+    },
+    {
+     "date": "2026-08-25",
+     "value": 4.58,
+     "derived": false
+    },
+    {
+     "date": "2026-09-01",
+     "value": 4.61,
+     "derived": false
+    },
+    {
+     "date": "2026-09-09",
+     "value": 4.88,
+     "note": "周报正文“Far East→Europe”口径",
+     "derived": false
+    },
+    {
+     "date": "2026-09-15",
+     "value": 5.25,
+     "note": "周报正文“Far East→Europe”口径",
+     "derived": false
+    },
+    {
+     "date": "2026-09-24",
+     "value": 4.3,
+     "derived": false
+    },
+    {
+     "date": "2026-09-30",
+     "value": 4.14,
+     "derived": false
+    },
+    {
+     "date": "2026-10-07",
+     "value": 3.83,
+     "derived": false
+    },
+    {
+     "date": "2026-10-13",
+     "value": 3.58,
+     "derived": false,
+     "url": "https://www.freightos.com/freight-resources/attacks-disrupt-saudi-air-cargo-china-europe-air-rates-slump-october-13-2026-update/"
+    }
+   ],
+   "seriesUrlNote": "该链接为系列级出处"
+  },
+  {
+   "name": "Freightos FBX11 亚洲→北欧 海运",
+   "unit": "USD/FEU",
+   "color": "#14b8a6",
+   "desc": "Freightos Baltic Index 周值（FBX11 Weekly），可与 SCFI 欧洲线交叉验证",
+   "source": "Freightos Weekly Update（AJOT / Air Freight News / freightos.com 转载）",
+   "url": "https://www.ajot.com/news/freightos-weekly-update-attacks-disrupt-saudi-air-cargo-china-europe-air-rates-slump",
+   "caveat": "仅收录公布了精确数值的周（缺 06-16、08-18、09-09、09-15 等周的精确值，不插补）。",
+   "points": [
+    {
+     "date": "2026-06-23",
+     "value": 4741,
+     "derived": false
+    },
+    {
+     "date": "2026-06-30",
+     "value": 4883,
+     "derived": false
+    },
+    {
+     "date": "2026-07-08",
+     "value": 5384,
+     "derived": false
+    },
+    {
+     "date": "2026-07-21",
+     "value": 5740,
+     "derived": false
+    },
+    {
+     "date": "2026-07-29",
+     "value": 5575,
+     "derived": false
+    },
+    {
+     "date": "2026-08-06",
+     "value": 5531,
+     "derived": false
+    },
+    {
+     "date": "2026-08-25",
+     "value": 4699,
+     "derived": false
+    },
+    {
+     "date": "2026-09-01",
+     "value": 4641,
+     "derived": false
+    },
+    {
+     "date": "2026-09-24",
+     "value": 3702,
+     "derived": false
+    },
+    {
+     "date": "2026-09-30",
+     "value": 3376,
+     "derived": false
+    },
+    {
+     "date": "2026-10-07",
+     "value": 3260,
+     "derived": false
+    },
+    {
+     "date": "2026-10-13",
+     "value": 3260,
+     "derived": false,
+     "url": "https://www.ajot.com/news/freightos-weekly-update-attacks-disrupt-saudi-air-cargo-china-europe-air-rates-slump"
+    }
+   ],
+   "seriesUrlNote": "该链接为系列级出处"
+  },
+  {
+   "name": "Freightos FBX13 亚洲→地中海 海运",
+   "unit": "USD/FEU",
+   "color": "#f97316",
+   "desc": "Freightos Baltic Index 周值（FBX13 Weekly）",
+   "source": "Freightos Weekly Update（AJOT / Air Freight News / freightos.com 转载）",
+   "url": "https://www.ajot.com/news/freightos-weekly-update-attacks-disrupt-saudi-air-cargo-china-europe-air-rates-slump",
+   "caveat": "仅收录公布了精确数值的周，不插补。",
+   "points": [
+    {
+     "date": "2026-06-23",
+     "value": 6308,
+     "derived": false
+    },
+    {
+     "date": "2026-06-30",
+     "value": 6423,
+     "derived": false
+    },
+    {
+     "date": "2026-07-08",
+     "value": 7100,
+     "derived": false
+    },
+    {
+     "date": "2026-07-21",
+     "value": 6852,
+     "derived": false
+    },
+    {
+     "date": "2026-07-29",
+     "value": 6697,
+     "derived": false
+    },
+    {
+     "date": "2026-08-06",
+     "value": 6554,
+     "derived": false
+    },
+    {
+     "date": "2026-08-25",
+     "value": 4976,
+     "derived": false
+    },
+    {
+     "date": "2026-09-01",
+     "value": 4800,
+     "derived": false
+    },
+    {
+     "date": "2026-09-24",
+     "value": 3881,
+     "derived": false
+    },
+    {
+     "date": "2026-09-30",
+     "value": 3620,
+     "derived": false
+    },
+    {
+     "date": "2026-10-07",
+     "value": 3555,
+     "derived": false
+    },
+    {
+     "date": "2026-10-13",
+     "value": 3804,
+     "derived": false,
+     "url": "https://www.ajot.com/news/freightos-weekly-update-attacks-disrupt-saudi-air-cargo-china-europe-air-rates-slump"
+    }
+   ],
+   "seriesUrlNote": "该链接为系列级出处"
+  },
+  {
+   "name": "Freightos FAX 中国→中东 空运",
+   "unit": "USD/kg",
+   "color": "#e11d48",
+   "desc": "FAX CN-ME 页面当期值（对应迪拜/利雅得空运行）",
+   "source": "freightos.com FAX Greater China→Middle East 页面",
+   "url": "https://www.freightos.com/enterprise/terminal/fax-greater-china-asia-to-middle-east/",
+   "caveat": "公开页面只显示当期值、无免费历史序列，故仅 1 个点；趋势从 W41 起每两周累积。",
+   "points": [
+    {
+     "date": "2026-10-15",
+     "value": 3.68,
+     "note": "页面当期值（访问于 10-15）",
+     "derived": false,
+     "url": "https://www.freightos.com/enterprise/terminal/fax-greater-china-asia-to-middle-east/"
+    }
+   ],
+   "seriesUrlNote": "该链接为系列级出处"
+  }
+ ]
+}
