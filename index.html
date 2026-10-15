@@ -27,6 +27,7 @@ main{margin-top:-50px}
 .card{background:var(--card);border-radius:var(--r);box-shadow:var(--sh);border:1px solid var(--line)}
 .disc{display:flex;gap:12px;align-items:flex-start;background:var(--warnbg);border:1px solid #fcd9a0;border-left:5px solid #f59e0b;color:#7a4a05;padding:14px 16px;border-radius:12px;margin-bottom:16px;box-shadow:var(--sh)}
 .disc .ic{font-size:20px;line-height:1}
+.disc2{margin-top:-4px}
 .disc b{color:#92400e}
 .filters{padding:16px;display:grid;grid-template-columns:2fr 1fr 1fr 1fr 1fr;gap:12px;align-items:end}
 .f label{display:block;font-size:12px;color:var(--sub);margin-bottom:5px;font-weight:600}
@@ -80,6 +81,7 @@ table{border-collapse:collapse;width:100%;font-size:13px}
 th,td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
 th{background:#f8fafc;position:sticky;top:0;font-size:12px;color:var(--sub);white-space:nowrap;cursor:pointer;user-select:none}
 th:hover{color:var(--pri)}
+td:not(.sm){white-space:nowrap}
 td.num{font-weight:700;white-space:nowrap;font-variant-numeric:tabular-nums}
 td.sm{font-size:12px;color:var(--sub);max-width:320px}
 tr:hover td{background:#fafcff}
@@ -94,7 +96,7 @@ tr:hover td{background:#fafcff}
 .tc .foot{font-size:11.5px;color:var(--sub);margin-top:6px}
 .badge{display:inline-block;font-size:11px;padding:1px 7px;border-radius:6px;background:#dcfce7;color:#166534;margin-left:6px;vertical-align:middle}
 .badge.pend{background:#f1f5f9;color:#475569}
-.tip{position:fixed;pointer-events:none;background:#0f172a;color:#fff;font-size:12px;padding:6px 9px;border-radius:7px;opacity:0;transition:opacity .1s;z-index:50;white-space:nowrap}
+.tip{position:fixed;pointer-events:none;max-width:340px;white-space:normal!important;background:#0f172a;color:#fff;font-size:12px;padding:6px 9px;border-radius:7px;opacity:0;transition:opacity .1s;z-index:50;white-space:nowrap}
 .about{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .about .card{padding:18px}
 .about h3{margin:0 0 10px;font-size:15px}
@@ -107,6 +109,45 @@ ol.gaps li{margin-bottom:5px}
 footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
 .legend{display:flex;gap:14px;font-size:12px;color:var(--sub);flex-wrap:wrap}
 .legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.bs{display:inline-block;font-size:11.5px;font-weight:700;padding:2px 8px;border-radius:6px;margin-left:8px;vertical-align:middle;white-space:nowrap}
+.b-pub{background:#dcfce7;color:#166534}.b-idx{background:#dbeafe;color:#1e40af}.b-mod{background:#fef3c7;color:#92400e;border:1px dashed #d97706}.b-ask{background:#fee2e2;color:#991b1b}.b-car{background:#ffedd5;color:#9a3412}
+.est{display:inline-block;font-size:11px;font-weight:700;color:#fff;background:#d97706;border-radius:5px;padding:1px 6px;margin-left:4px;vertical-align:middle}
+.st{display:inline-block;font-size:11px;padding:1px 7px;border-radius:6px;margin-left:4px;white-space:nowrap}
+.st.bg{background:#e5e7eb;color:#374151}.st.exp{background:#dc2626;color:#fff;font-weight:700}.st.soon{background:#fde68a;color:#78350f}.st.ok{background:#e0f2fe;color:#075985}
+.rc.expired{opacity:.72;background:#fff5f5}
+.rc .scope{font-size:12px;color:var(--sub);margin-top:2px}
+.spec{display:grid;grid-template-columns:1fr 1fr;gap:6px 10px;font-size:12px;color:var(--sub)}
+.spec b{display:block;color:var(--ink);font-size:12.5px;font-weight:600}
+.legs{display:grid;grid-template-columns:1.1fr 1fr 1fr;gap:8px}
+.leg{border:1px solid var(--line);border-radius:10px;padding:8px 10px;font-size:12px;color:var(--sub);background:#fff}
+.leg h4{margin:0 0 4px;font-size:12px;color:var(--ink)}
+.leg b{color:var(--ink);font-weight:600}
+.leg.na{background:#f8fafc}.leg.tbd b{color:var(--warn)}
+.route{display:grid;grid-template-columns:1.3fr 1fr 1.2fr;gap:8px;font-size:12px;color:var(--sub)}
+.route b{display:block;color:var(--ink);font-size:12.5px;font-weight:600}
+.legacy{font-size:11px;color:#64748b;background:#f1f5f9;border-radius:5px;padding:0 6px;margin-left:4px;font-weight:500}
+.dates{display:grid;grid-template-columns:1.4fr .6fr 1.2fr;gap:8px;font-size:12px;color:var(--sub);border-top:1px dashed var(--line);padding-top:8px}
+.dates b{display:block;color:var(--ink);font-size:12px;font-weight:600}
+.method{font-size:12px;background:#fffbeb;border:1px dashed #f59e0b;border-radius:8px;padding:6px 10px;color:#78350f}
+.budget{font-size:12px;color:#475569;background:#f1f5f9;border-radius:8px;padding:6px 10px}
+.basisleg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12px;color:var(--sub);margin:-4px 0 12px;align-items:center}
+.basisleg .bs{margin-left:0;margin-right:4px}
+.mx{overflow:auto}
+.mx table{font-size:12.5px}
+.mx th{cursor:default;position:static;text-align:center}
+.mx td.c{text-align:center;white-space:nowrap}
+.mx td.c small{display:block;font-size:10.5px;color:var(--sub);font-weight:400}
+.mx td.c i{font-style:normal;display:inline-block;font-size:10px;color:#9a3412;background:#ffedd5;border-radius:4px;padding:0 4px;margin-top:2px}
+.mxsum{font-size:12.5px;color:var(--sub);padding:10px 12px}
+.kpi .s{font-size:11.5px;color:var(--sub);margin-top:2px}
+.nt{font-size:12px;color:var(--sub);padding:18px 0;text-align:center;border:1px dashed #cbd5e1;border-radius:10px;background:#f8fafc}
+.tc .dl{font-size:11.5px;color:var(--sub);margin-top:4px;display:flex;gap:12px;flex-wrap:wrap}
+.tc .dl .h{display:inline-block;width:9px;height:9px;border-radius:50%;border:2px solid #475569;background:#fff;vertical-align:-1px;margin-right:4px}
+.tc .dl .f{display:inline-block;width:9px;height:9px;border-radius:50%;background:#475569;vertical-align:-1px;margin-right:4px}
+.tc svg a{cursor:pointer}
+.sp3{grid-column:auto}
+@media (max-width:560px){.legs,.route,.dates,.spec{grid-template-columns:1fr}}
+td .bs,.mx .bs{margin-left:0}
 @media (max-width:980px){.filters{grid-template-columns:1fr 1fr}.filters .f.q{grid-column:1/-1}.kpis{grid-template-columns:1fr 1fr}.about{grid-template-columns:1fr}}
 @media (max-width:560px){.kpi .v{font-size:19px}.wrap{padding:0 12px}.top h1{font-size:21px}.filters{grid-template-columns:1fr}.grid,.trends{grid-template-columns:1fr}.meta{grid-template-columns:1fr 1fr}dl.kv{grid-template-columns:1fr}}
 @media print{
@@ -119,7 +160,7 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
  .trends{grid-template-columns:1fr 1fr}
  .src details,.src{display:block}
  details>*{display:block}
- .disc{box-shadow:none}
+ .disc{box-shadow:none;break-inside:avoid}
  a{color:#000;text-decoration:none}
 }
 </style>
@@ -130,7 +171,7 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
   <div class="toprow">
    <div>
     <h1>🌐 出口运价参考看板</h1>
-    <div class="sub">手术机器人整机出口 · 空运 / 海运 公开市场运价与时效参考 · 供销售谈判粗算使用</div>
+    <div class="sub">手术机器人整机出口 · 空运 / 海运 公开市场运价与时效参考 · 供内部初步预算与谈判参考</div>
    </div>
    <div class="cycle" title="数据周期">
     <span class="dot"></span>
@@ -138,14 +179,19 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    </div>
   </div>
   <nav class="nav no-print">
-   <a href="#routes">线路参考价</a><a href="#trends">市场趋势</a><a href="#about">使用说明与来源</a>
+   <a href="#routes">线路参考价</a><a href="#coverage">待补齐线路</a><a href="#trends">市场趋势</a><a href="#about">使用说明与来源</a>
   </nav>
  </div>
 </header>
 <main class="wrap">
  <div class="disc" role="note">
   <div class="ic">⚠️</div>
-  <div><b>重要声明：本看板全部价格为公开市场参考（公开指数 / 公开牌价推算），不是承运人或货代对本公司的可成交报价，</b>不能作为合同运价或承诺时效。淡旺季、船司/航司、危品等级会导致大幅波动；对外报价请注明「公开参考非承诺价，待货代实报」。表内一般不含起运地拖车报关、目的港杂费、清关、关税、保险等。</div>
+  <div><b>重要声明：本看板全部价格为公开市场参考（公开指数 / 公开牌价推算），不是承运人或货代对本公司的可成交报价，</b>不能作为合同运价或承诺时效。<b>用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。</b>淡旺季、船司/航司、危品等级会导致大幅波动；估算值均已标「估算」并注明方法。表内一般不含起运地拖车报关、目的港杂费、清关、关税、保险等。</div>
+ </div>
+
+ <div class="disc disc2" role="note">
+  <div class="ic">📌</div>
+  <div><b>报价条件待确认：</b>当前价格来自公开信息，多数来源未注明报价对应的条件。空运价格（USD/kg）未说明计费重量档（如 ≥100kg / ≥300kg / ≥1000kg），也未说明是否适用于超尺寸、不可堆叠的整机；海运“40尺”指数未区分 40GP 与 40HQ（仅桑托斯部分线路注明 40GP）。因此这些字段标为“待确认”，<b>不同线路之间不宜直接比价，也不代表针对我们整机的报价。</b>待取得货代实际报价后优化。</div>
  </div>
 
  <section class="card filters" aria-label="筛选">
@@ -154,18 +200,24 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
   <div class="f"><label>运输方式</label><div class="seg" id="mode"><button data-v="" class="on">全部</button><button data-v="空运">✈ 空运</button><button data-v="海运">🚢 海运</button></div></div>
   <div class="f"><label>货型</label><div class="seg" id="cargo"><button data-v="" class="on">全部</button><button data-v="整机普货">普货</button><button data-v="整机危险品">危险品</button></div></div>
   <div class="f"><label>视图</label><div class="seg" id="view"><button data-v="cards" class="on">卡片</button><button data-v="table">表格</button></div></div>
+  <div class="f"><label for="basis">价格依据</label><select id="basis"><option value="">全部依据</option><option>公开报价</option><option>区域指数</option><option>模型估算</option><option>待询价</option></select></div>
+  <div class="f"><label for="stat">数据状态</label><select id="stat"><option value="">全部状态</option><option value="cur">当期行情</option><option value="bg">背景参考</option><option value="exp">已过期</option><option value="soon">即将到期</option></select></div>
   <div class="chips" id="regions"></div>
  </section>
 
  <div class="kpis" id="kpis"></div>
 
  <div class="sec" id="routes"><h2>线路参考价</h2><div class="legend"><span><i style="background:var(--air)"></i>空运</span><span><i style="background:var(--sea)"></i>海运</span><span><i style="background:var(--dg)"></i>危险品</span><span id="cnt"></span></div></div>
+ <div class="basisleg"><b>价格依据：</b><span><span class="bs b-pub">公开报价</span>该线路有公开牌价</span><span><span class="bs b-idx">区域指数</span>区域/航线级指数或公开行情，非该城市单独报价</span><span><span class="bs b-mod">模型估算</span><span class="est">估算</span>叠加危柜溢价/邻近枢纽/转运推算，卡片注明方法</span><span><span class="bs b-ask">待询价</span>无公开数据，需实询</span></div>
  <div id="list"></div>
+
+ <div class="sec" id="coverage"><h2>待补齐线路（覆盖矩阵）</h2><div class="hint" id="mxHint"></div></div>
+ <div class="card" id="matrix"></div>
 
  <div class="sec" id="trends"><h2>市场趋势（公开指数）</h2><div class="hint" id="trendHint"></div></div>
  <div class="trends" id="trendGrid"></div>
 
- <div class="sec" id="about"><h2>使用说明与数据来源</h2><div class="hint">源表：运价看板_v1.1.xlsx</div></div>
+ <div class="sec" id="about"><h2>使用说明与数据来源</h2><div class="hint">源表：运价看板_v1.2.xlsx</div></div>
  <div class="about">
   <div class="card"><h3>📘 使用说明</h3><dl class="kv" id="usage"></dl></div>
   <div class="card"><h3>🔄 更新规则 / 字段口径</h3><dl class="kv" id="rules"></dl><h3 style="margin-top:16px">⚠ 缺口说明</h3><ol class="gaps" id="gaps"></ol></div>
@@ -179,11 +231,13 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
 <script id="data" type="application/json">{
  "meta": {
   "title": "出口运价参考看板",
-  "version": "v1.1",
+  "version": "v1.2",
   "cycle": "2026-W41",
   "cycleRange": "约 2026-10-06～10-12（部分空运牌价至 10-21）",
   "cadence": "每两周更新",
-  "generated": "2026-10-15"
+  "generated": "2026-10-15",
+  "generatedAt": "2026-10-15 20:38 (UTC+8)",
+  "staleDays": 28
  },
  "routes": [
   {
@@ -197,12 +251,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "4.7–6.0",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "机场到机场",
+   "tier": "Seabay 牌价对应 100–1000kg；FAX 指数不分重量档",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "5-8",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "经CDG/AMS或欧陆枢纽中转（v1.1备注，班次待确认）",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "当期行情",
+   "pub": "Seabay 2026-10-10；FAX 当期页面（发布日待核实）",
+   "collected": "2026-10-15",
+   "validity": "Seabay 牌价到期日待核实；FAX 为指数无有效期",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "Freightos FAX CN-EU≈4.71；Seabay欧线牌价≈5.4–6.9（100–1000kg，2026-10）",
-   "lastMile": "直达/少中转",
    "season": "Q4旺季易上浮",
-   "note": "公开市场参考非可成交价；马赛多为经CDG/AMS或欧陆枢纽，报FAX欧线级",
+   "note": "公开参考，非可成交价；马赛多为经CDG/AMS或欧陆枢纽，报FAX欧线级；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-马赛-空运-整机普货"
   },
   {
@@ -216,12 +290,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/CBM",
    "price": "95–165",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "拼箱 LCL（无柜型）",
+   "oversize": "不适用（海运）",
    "transit": "30-40",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "背景参考",
+   "pub": "2026年行业文（具体日期待核实）；SCFI 地中海 40' 对照 2026-10-09",
+   "collected": "2026-10-15",
+   "validity": "待核实",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "公开LCL欧地中海行情（2026拼箱参考）；SCFI地中海40'=3790作FCL对照",
-   "lastMile": "直达/少中转",
    "season": "",
-   "note": "拼箱按CBM；公开市场参考非可成交价；体积大时比FCL",
+   "note": "拼箱按CBM；公开参考，非可成交价；体积大时比FCL；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-马赛-海运-整机普货"
   },
   {
@@ -235,12 +329,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/40'",
    "price": "4,500–5,300",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "SCFI 地中海 40' 3,790 + 危柜溢价约 +20%～40%（示意）；原始依据：SCFI地中海40'=3,790（2026-10-09）+危柜溢价示意约+20%～40%",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "40'，GP/HQ 待确认（SCFI 未区分）",
+   "oversize": "不适用（海运）",
    "transit": "30-40",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "当期行情",
+   "pub": "SCFI 2026-10-09；危品溢价为2026行业指南（日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "SCFI地中海40'=3,790（2026-10-09）+危柜溢价示意约+20%～40%",
-   "lastMile": "直达/少中转",
    "season": "危柜溢价",
-   "note": "按整柜；危品附加费船司各异，公开市场参考非可成交价",
+   "note": "按整柜；危品附加费船司各异，公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-马赛-海运-整机危险品"
   },
   {
@@ -254,12 +368,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "5.0–6.5",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "邻近枢纽价+末段卡运推算；原始依据：邻近枢纽：FAX/欧线公开价+末段卡运；无BOD直达公开指数",
+   "scope": "到指定城市（含末段卡运估算，未拆分）",
+   "tier": "待确认",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "6-10",
+   "tbound": "待确认",
+   "route": "经CDG/AMS中转",
+   "via": "CDG/AMS",
+   "lastMode": "卡车",
+   "inlandCost": "未单列，已含于估算（金额待核实）",
+   "inlandBasis": "估算",
+   "inlandTime": "待核实",
+   "full": "待核实（主段与内陆/末段须均有数据才显示）",
+   "legacyTag": "空卡（经CDG/AMS）",
+   "rtype": "当期行情",
+   "pub": "FAX 当期页面（发布日待核实）",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "邻近枢纽：FAX/欧线公开价+末段卡运；无BOD直达公开指数",
-   "lastMile": "空卡（经CDG/AMS）",
    "season": "无直达",
-   "note": "经巴黎/阿姆斯特丹；公开市场参考非可成交价",
+   "note": "经巴黎/阿姆斯特丹；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-波尔多-空运-整机普货"
   },
   {
@@ -273,12 +407,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "4.7–6.0",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "机场到机场",
+   "tier": "FAX 指数不分重量档；BSI 欧线区间重量档待确认",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "5-8",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "当期行情",
+   "pub": "FAX 当期页面（待核实）；BSI 标注2026年更新",
+   "collected": "2026-10-15",
+   "validity": "不适用（指数/行情，无报价有效期）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "Freightos FAX CN-EU≈4.71；BSI欧线区间参考",
-   "lastMile": "直达/少中转",
    "season": "旺季上浮",
-   "note": "默认米兰MXP优先；公开市场参考非可成交价",
+   "note": "默认米兰MXP优先；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-意大利-空运-整机普货"
   },
   {
@@ -292,12 +446,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/CBM",
    "price": "85–145",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "拼箱 LCL（无柜型）",
+   "oversize": "不适用（海运）",
    "transit": "32-42",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "背景参考",
+   "pub": "2026年行业文（具体日期待核实）；SCFI 欧洲 40' 对照 2026-10-09",
+   "collected": "2026-10-15",
+   "validity": "待核实",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "公开LCL北欧/安特卫普行情；SCFI欧洲40'=3,455（2026-10-09）对照",
-   "lastMile": "直达/少中转",
    "season": "",
-   "note": "拼箱按CBM；公开市场参考非可成交价",
+   "note": "拼箱按CBM；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "宁波-比利时-海运-整机普货"
   },
   {
@@ -311,12 +485,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "5.0–6.5",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "欧线公开行情+中东欧溢价推算；原始依据：欧线公开行情+中东欧溢价；FAX欧线为底",
+   "scope": "机场到机场",
+   "tier": "待确认",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "5-9",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "当期行情",
+   "pub": "FAX 当期页面（待核实）",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "欧线公开行情+中东欧溢价；FAX欧线为底",
-   "lastMile": "直达/少中转",
    "season": "",
-   "note": "公开市场参考非可成交价",
+   "note": "公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-波兰-空运-整机普货"
   },
   {
@@ -330,12 +524,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "6.0–7.5",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "欧线枢纽价+巴尔干空卡推算；原始依据：无直达公开指数；按欧线枢纽价+巴尔干空卡估算",
+   "scope": "到指定城市（含末段卡运估算，未拆分）",
+   "tier": "待确认",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "7-12",
+   "tbound": "待确认",
+   "route": "经IST/VIE中转",
+   "via": "IST/VIE",
+   "lastMode": "卡车",
+   "inlandCost": "未单列，已含于估算（金额待核实）",
+   "inlandBasis": "估算",
+   "inlandTime": "待核实",
+   "full": "待核实（主段与内陆/末段须均有数据才显示）",
+   "legacyTag": "空卡（经IST/VIE）",
+   "rtype": "当期行情",
+   "pub": "FAX/欧线行情（日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "无直达公开指数；按欧线枢纽价+巴尔干空卡估算",
-   "lastMile": "空卡（经IST/VIE）",
    "season": "无直达",
-   "note": "经伊斯坦布尔/维也纳；公开市场参考非可成交价；建议货代实询",
+   "note": "经伊斯坦布尔/维也纳；公开参考，非可成交价；建议货代实询；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-黑山-空运-整机普货"
   },
   {
@@ -349,12 +563,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "6.0–7.5",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "欧线枢纽价+巴尔干空卡推算；原始依据：无直达公开指数；按欧线枢纽价+巴尔干空卡估算",
+   "scope": "到指定城市（含末段卡运估算，未拆分）",
+   "tier": "待确认",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "7-12",
+   "tbound": "待确认",
+   "route": "经IST/VIE中转",
+   "via": "IST/VIE",
+   "lastMode": "卡车",
+   "inlandCost": "未单列，已含于估算（金额待核实）",
+   "inlandBasis": "估算",
+   "inlandTime": "待核实",
+   "full": "待核实（主段与内陆/末段须均有数据才显示）",
+   "legacyTag": "空卡（经IST/VIE）",
+   "rtype": "当期行情",
+   "pub": "FAX/欧线行情（日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "无直达公开指数；按欧线枢纽价+巴尔干空卡估算",
-   "lastMile": "空卡（经IST/VIE）",
    "season": "无直达",
-   "note": "经伊斯坦布尔/维也纳；公开市场参考非可成交价；建议货代实询",
+   "note": "经伊斯坦布尔/维也纳；公开参考，非可成交价；建议货代实询；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-波黑-空运-整机普货"
   },
   {
@@ -368,12 +602,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/CBM",
    "price": "95–165",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "拼箱 LCL（无柜型）",
+   "oversize": "不适用（海运）",
    "transit": "28-38",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "背景参考",
+   "pub": "2026年行业文（具体日期待核实）；SCFI 地中海 40' 对照 2026-10-09",
+   "collected": "2026-10-15",
+   "validity": "待核实",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "公开LCL意大利港；SCFI地中海40'=3,790对照",
-   "lastMile": "直达/少中转",
    "season": "",
-   "note": "拼箱按CBM；公开市场参考非可成交价",
+   "note": "拼箱按CBM；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-意大利-海运-整机普货"
   },
   {
@@ -387,12 +641,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/40'",
    "price": "4,100–4,900",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "SCFI 欧洲 40' 3,455 + 危柜溢价约 +20%～40%（示意）；原始依据：SCFI欧洲40'=3,455（2026-10-09）+危柜溢价示意约+20%～40%",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "40'，GP/HQ 待确认（SCFI 未区分）",
+   "oversize": "不适用（海运）",
    "transit": "32-42",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "当期行情",
+   "pub": "SCFI 2026-10-09；危品溢价为2026行业指南（日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "SCFI欧洲40'=3,455（2026-10-09）+危柜溢价示意约+20%～40%",
-   "lastMile": "直达/少中转",
    "season": "危柜溢价",
-   "note": "按整柜；公开市场参考非可成交价",
+   "note": "按整柜；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-比利时-海运-整机危险品"
   },
   {
@@ -406,12 +680,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "2.0–4.0",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "机场到机场",
+   "tier": ">100kg（BSI 中国→东南亚区间）",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "2-4",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "背景参考",
+   "pub": "BSI 标注2026年更新（具体日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "待核实",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "BSI中国→东南亚公开区间≈1.76–4.10（>100kg）",
-   "lastMile": "直达/少中转",
    "season": "台风季波动",
-   "note": "公开市场参考非可成交价",
+   "note": "公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "深圳-马尼拉-空运-整机普货"
   },
   {
@@ -425,12 +719,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/CBM",
    "price": "30–60",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "拼箱 LCL（无柜型）",
+   "oversize": "不适用（海运）",
    "transit": "10-18",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "背景参考",
+   "pub": "公开东南亚LCL费率（日期待核实）；SCFI 东南亚 TEU 对照 2026-09-30",
+   "collected": "2026-10-15",
+   "validity": "待核实",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "公开东南亚LCL（雅加达）；SCFI东南亚TEU≈1,171（2026-09-30）对照",
-   "lastMile": "直达/少中转",
    "season": "旺季+CIC",
-   "note": "拼箱按CBM；注意目的港CIC等附加费；公开市场参考非可成交价",
+   "note": "拼箱按CBM；注意目的港CIC等附加费；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-雅加达-海运-整机普货"
   },
   {
@@ -444,12 +758,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "2.0–4.0",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "机场到机场",
+   "tier": ">100kg（BSI 中国→东南亚区间）",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "2-4",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "背景参考",
+   "pub": "BSI 标注2026年更新（具体日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "待核实",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "BSI中国→东南亚公开区间≈1.76–4.10",
-   "lastMile": "直达/少中转",
    "season": "",
-   "note": "公开市场参考非可成交价",
+   "note": "公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "深圳-曼谷-空运-整机普货"
   },
   {
@@ -463,12 +797,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "2.0–4.0",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "机场到机场",
+   "tier": ">100kg（BSI 中国→东南亚区间）",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "2-4",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "背景参考",
+   "pub": "BSI 标注2026年更新（具体日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "待核实",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "BSI中国→东南亚公开区间≈1.76–4.10",
-   "lastMile": "直达/少中转",
    "season": "",
-   "note": "公开市场参考非可成交价",
+   "note": "公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "深圳-吉隆坡-空运-整机普货"
   },
   {
@@ -482,12 +836,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/CBM",
    "price": "15–35",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "拼箱 LCL（无柜型）",
+   "oversize": "不适用（海运）",
    "transit": "5-10",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "背景参考",
+   "pub": "公开东南亚LCL费率表（日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "待核实",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "公开东南亚LCL（胡志明/海防）",
-   "lastMile": "直达/少中转",
    "season": "",
-   "note": "拼箱按CBM；公开市场参考非可成交价",
+   "note": "拼箱按CBM；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "深圳-胡志明-海运-整机普货"
   },
   {
@@ -501,12 +875,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/40'",
    "price": "400–800",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "公开东南亚 FCL 40' 普柜区间 + 危柜附加推算；原始依据：公开东南亚FCL 40'区间≈250–550普柜 + 危柜附加",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "40'，GP/HQ 待确认",
+   "oversize": "不适用（海运）",
    "transit": "5-12",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "背景参考",
+   "pub": "公开东南亚FCL区间（日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "公开东南亚FCL 40'区间≈250–550普柜 + 危柜附加",
-   "lastMile": "直达/少中转",
    "season": "危柜溢价",
-   "note": "短程危柜附加占比高；公开市场参考非可成交价",
+   "note": "短程危柜附加占比高；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "深圳-胡志明-海运-整机危险品"
   },
   {
@@ -520,12 +914,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/40'",
    "price": "700–1,500",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "公开东南亚 FCL 40' 雅加达区间 + 危柜附加推算；原始依据：公开东南亚FCL 40'雅加达区间 + 危柜附加",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "40'，GP/HQ 待确认",
+   "oversize": "不适用（海运）",
    "transit": "10-20",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "背景参考",
+   "pub": "公开东南亚FCL区间（日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "公开东南亚FCL 40'雅加达区间 + 危柜附加",
-   "lastMile": "直达/少中转",
    "season": "危柜溢价",
-   "note": "公开市场参考非可成交价",
+   "note": "公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-雅加达-海运-整机危险品"
   },
   {
@@ -539,12 +953,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "8.5–9.5",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "机场到机场",
+   "tier": ">100kg（BSI 中国→南美区间）",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "8-14",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "经中转（多中转，中转点待确认）",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "空卡（多中转）",
+   "rtype": "背景参考",
+   "pub": "BSI 标注2026年更新（具体日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "待核实",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "BSI中国→南美公开区间≈8.50–9.24（>100kg，2026）",
-   "lastMile": "空卡（多中转）",
    "season": "多中转",
-   "note": "公开市场参考非可成交价；多中转舱位紧时上浮大",
+   "note": "公开参考，非可成交价；多中转舱位紧时上浮大；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-布宜诺斯艾利斯-空运-整机普货"
   },
   {
@@ -558,12 +992,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/CBM",
    "price": "150–250",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "南美西岸公开 LCL 推算；原始依据：南美西岸公开LCL推算；SCFI南美相关高位（Santos等TEU数千美元级）作对照",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "拼箱 LCL（无柜型）",
+   "oversize": "不适用（海运）",
    "transit": "35-50",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "经枢纽港/支线转运（v1.1标注海卡/支线，具体待确认）",
+   "via": "无",
+   "lastMode": "待确认",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "待核实（主段与内陆/末段须均有数据才显示）",
+   "legacyTag": "海卡/支线",
+   "rtype": "背景参考",
+   "pub": "日期待核实（SCFI 南美对照 2026-09-30）",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "南美西岸公开LCL推算；SCFI南美相关高位（Santos等TEU数千美元级）作对照",
-   "lastMile": "海卡/支线",
    "season": "高位震荡",
-   "note": "默认瓦尔帕莱索；公开LCL偏少，区间较宽；公开市场参考非可成交价",
+   "note": "默认瓦尔帕莱索；公开LCL偏少，区间较宽；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-智利-海运-整机普货"
   },
   {
@@ -577,12 +1031,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/40'",
    "price": "7,000–12,000",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "南美线 SCFI 相关高位（TEU）推算 FEU + 危柜溢价；原始依据：南美线SCFI相关高位（TEU数千）推算FEU + 危柜溢价；公开危柜牌价稀缺",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "40'，GP/HQ 待确认",
+   "oversize": "不适用（海运）",
    "transit": "35-50",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "经枢纽港/支线转运（v1.1标注海卡/支线，具体待确认）",
+   "via": "无",
+   "lastMode": "待确认",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "待核实（主段与内陆/末段须均有数据才显示）",
+   "legacyTag": "海卡/支线",
+   "rtype": "背景参考",
+   "pub": "日期待核实（SCFI 南美对照 2026-09-30）",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "南美线SCFI相关高位（TEU数千）推算FEU + 危柜溢价；公开危柜牌价稀缺",
-   "lastMile": "海卡/支线",
    "season": "高位+危柜",
-   "note": "区间很宽，务必实询；公开市场参考非可成交价",
+   "note": "区间很宽，务必实询；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-智利-海运-整机危险品"
   },
   {
@@ -596,12 +1070,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "8.5–11.5",
    "ccy": "USD",
+   "basis": "公开报价",
+   "method": "",
+   "scope": "机场到机场",
+   "tier": "Seabay 牌价 100–300kg；Sino-Shipping ≥1000kg；BSI >100kg",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "5-9",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "几乎无直达，多经中东/欧美中转（具体待确认）",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "空卡（多中转）",
+   "rtype": "当期行情",
+   "pub": "Seabay（发布日待核实，报价到期 10-16～10-21）；Sino-Shipping 2026-10；BSI 2026",
+   "collected": "2026-10-15",
+   "validity": "2026-10-16～10-21（Seabay 牌价到期日，取最早）",
+   "validEnd": "2026-10-16",
    "cycle": "2026-W41",
    "source": "Seabay PVG→GRU牌价≈10.3–11.8（TK/QR/O3，100–300kg，2026-10-19/21）；UA低价≈7.1–8.6；Sino-Shipping 10月≥1000kg≈10.2；BSI中国→南美≈8.50–9.24",
-   "lastMile": "空卡（多中转）",
    "season": "Q4旺季上浮",
-   "note": "公开市场参考非可成交价；GRU为巴西主要货运口岸，几乎无直达，多经中东/欧美中转；区间下沿为低价航司，成交需实询",
+   "note": "公开参考，非可成交价；GRU为巴西主要货运口岸，几乎无直达，多经中东/欧美中转；区间下沿为低价航司，成交需实询；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-圣保罗-空运-整机普货"
   },
   {
@@ -615,12 +1109,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/CBM",
    "price": "90–220",
    "ccy": "USD",
+   "basis": "公开报价",
+   "method": "",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "拼箱 LCL（无柜型）",
+   "oversize": "不适用（海运）",
    "transit": "35-48",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "当期行情",
+   "pub": "Sino-Shipping 2026-10；DTFU 2026；Flexport（日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "待核实（各来源有效期未标注）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "Sino-Shipping 10月LCL Santos≈90；DTFU 2026上海→Santos≈120–220；SHAQ报价≈380（偏高，作异常上沿不计入）；Flexport宁波→Santos 5CBM≈835–885（≈167–177/CBM）",
-   "lastMile": "直达/少中转",
    "season": "LCL拼箱班次少",
-   "note": "拼箱按CBM；港到港，不含Santos→圣保罗市区拖运、CFS及巴西税费；公开市场参考非可成交价",
+   "note": "拼箱按CBM；港到港，不含Santos→圣保罗市区拖运、CFS及巴西税费；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-圣保罗-海运-整机普货"
   },
   {
@@ -634,12 +1148,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/40'",
    "price": "7,000–9,500",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "SCFI 南美 Santos + 40GP 公开普柜价 + 危柜溢价约 +20%～40%（示意）；原始依据：SCFI南美(Santos)≈5,980/TEU（2026-09-30，周降8.4%）；Global Resources 40GP≈6,800–7,100（9/15–10/14）；Sino-Shipping 10月40GP≈5,490–6,710；危柜溢价示意+20%～40%",
+   "scope": "港到港",
+   "tier": "不适用（海运）",
+   "equip": "40GP（普柜来源标注 40GP；危柜部分为估算）",
+   "oversize": "不适用（海运）",
    "transit": "30-45",
+   "tbound": "港到港（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的港即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "当期行情",
+   "pub": "SCFI 南美 2026-09-30；Global Resources 9/15–10/14 周报；Sino-Shipping 2026-10",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "SCFI南美(Santos)≈5,980/TEU（2026-09-30，周降8.4%）；Global Resources 40GP≈6,800–7,100（9/15–10/14）；Sino-Shipping 10月40GP≈5,490–6,710；危柜溢价示意+20%～40%",
-   "lastMile": "直达/少中转",
    "season": "高位回落+危柜溢价",
-   "note": "按整柜；危品附加费船司各异（南美侧多有HAZ审批费）；公开市场参考非可成交价；巴西进口还需ANVISA/Receita合规",
+   "note": "按整柜；危品附加费船司各异（南美侧多有HAZ审批费）；公开参考，非可成交价；巴西进口还需ANVISA/Receita合规；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-圣保罗-海运-整机危险品"
   },
   {
@@ -653,12 +1187,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "9.5–13.0",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "PVG→GRU 公开牌价为底 + GRU/VCP→BSB 转运约 +1～1.5 USD/kg（推算）；原始依据：无PVG→BSB公开牌价；以PVG→GRU牌价≈10.3–11.8为底+GRU/VCP→BSB国内卡航/航空转运估算（约+1～1.5 USD/kg，推算）",
+   "scope": "到指定城市（GRU 价+转运推算，未拆分）",
+   "tier": "待确认（以 GRU 牌价 100–300kg 为底推算）",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "6-10",
+   "tbound": "待确认",
+   "route": "经GRU/VCP中转",
+   "via": "GRU/VCP",
+   "lastMode": "待确认（国内卡车或航空转运）",
+   "inlandCost": "约 +1～1.5 USD/kg（v1.1 推算，已含于主价；模型估算）",
+   "inlandBasis": "估算",
+   "inlandTime": "待核实",
+   "full": "待核实（主段与内陆/末段须均有数据才显示）",
+   "legacyTag": "空卡（经GRU/VCP）",
+   "rtype": "当期行情",
+   "pub": "Seabay GRU 牌价（发布日待核实，到期 10-16～10-21）",
+   "collected": "2026-10-15",
+   "validity": "2026-10-16（所依据 Seabay GRU 牌价最早到期日）；本行为估算",
+   "validEnd": "2026-10-16",
    "cycle": "2026-W41",
    "source": "无PVG→BSB公开牌价；以PVG→GRU牌价≈10.3–11.8为底+GRU/VCP→BSB国内卡航/航空转运估算（约+1～1.5 USD/kg，推算）",
-   "lastMile": "空卡（经GRU/VCP）",
    "season": "无直达",
-   "note": "公开市场参考非可成交价；BSB为推算价，置信度低；需货代实询转运段与清关地（GRU清关后转运或BSB保税）",
+   "note": "公开参考，非可成交价；BSB为估算价；需货代实询转运段与清关地（GRU清关后转运或BSB保税）；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-巴西利亚-空运-整机普货"
   },
   {
@@ -670,14 +1224,34 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "mode": "海运",
    "cargo": "整机普货",
    "unit": "USD/CBM",
-   "price": "90–220（港到港，不含内陆）",
+   "price": "90–220",
    "ccy": "USD",
-   "transit": "45-60",
+   "basis": "公开报价",
+   "method": "",
+   "scope": "港到港（Santos，不含内陆）",
+   "tier": "不适用（海运）",
+   "equip": "拼箱 LCL（无柜型）",
+   "oversize": "不适用（海运）",
+   "transit": "35-48",
+   "tbound": "港到港（Santos）",
+   "route": "经Santos港",
+   "via": "Santos",
+   "lastMode": "卡车",
+   "inlandCost": "待询价（无公开价）",
+   "inlandBasis": "待询价",
+   "inlandTime": "待核实",
+   "full": "待核实（主段与内陆/末段须均有数据才显示）",
+   "legacyTag": "海卡（经Santos+内陆拖运）",
+   "rtype": "当期行情",
+   "pub": "同 Santos LCL：Sino-Shipping 2026-10；DTFU 2026；Flexport（日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "待核实（各来源有效期未标注）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "同Santos LCL参考（Sino-Shipping/DTFU/Flexport）；巴西利亚内陆拖运无公开牌价，需另询",
-   "lastMile": "海卡（经Santos+内陆拖运）",
    "season": "内陆拖运另计",
-   "note": "巴西利亚为内陆城市，约1,000km+；价格仅为Santos港到港，内陆拖运/清关地选择另计；公开市场参考非可成交价",
+   "note": "巴西利亚为内陆城市，约1,000km+；价格仅为Santos港到港，内陆拖运/清关地选择另计；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "45-60",
    "id": "上海-巴西利亚-海运-整机普货"
   },
   {
@@ -689,14 +1263,34 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "mode": "海运",
    "cargo": "整机危险品",
    "unit": "USD/40'",
-   "price": "7,000–9,500（港到港，不含内陆）",
+   "price": "7,000–9,500",
    "ccy": "USD",
-   "transit": "40-55",
+   "basis": "模型估算",
+   "method": "SCFI 南美 Santos + 危柜溢价约 +20%～40%（示意）；原始依据：同Santos危柜推算（SCFI Santos+危柜溢价）；危品内陆卡车需危运资质，无公开牌价",
+   "scope": "港到港（Santos，不含内陆）",
+   "tier": "不适用（海运）",
+   "equip": "40GP（普柜来源标注 40GP；危柜部分为估算）",
+   "oversize": "不适用（海运）",
+   "transit": "30-45",
+   "tbound": "港到港（Santos）",
+   "route": "经Santos港",
+   "via": "Santos",
+   "lastMode": "卡车",
+   "inlandCost": "待询价（危险品内陆卡运需危运资质，无公开价）",
+   "inlandBasis": "待询价",
+   "inlandTime": "待核实",
+   "full": "待核实（主段与内陆/末段须均有数据才显示）",
+   "legacyTag": "海卡（经Santos+内陆拖运）",
+   "rtype": "当期行情",
+   "pub": "SCFI 南美 2026-09-30；Global Resources 9/15–10/14 周报",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "同Santos危柜推算（SCFI Santos+危柜溢价）；危品内陆卡车需危运资质，无公开牌价",
-   "lastMile": "海卡（经Santos+内陆拖运）",
    "season": "高位+危柜+内陆危运",
-   "note": "内陆危险品公路运输需另询资质与费用；公开市场参考非可成交价",
+   "note": "内陆危险品公路运输需另询资质与费用；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "40-55",
    "id": "上海-巴西利亚-海运-整机危险品"
   },
   {
@@ -710,12 +1304,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "9.0–13.0",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "非洲/北非普货 + 货机危货溢价（示意）；原始依据：非洲/北非公开普货≈8–9级 + 货机危货溢价示意；无稳定TUN危货公开指数",
+   "scope": "机场到机场",
+   "tier": "待确认",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "6-12",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "经中转（仅货机，班次待确认）",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "空卡（货机中转）",
+   "rtype": "背景参考",
+   "pub": "无稳定公开指数（日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "非洲/北非公开普货≈8–9级 + 货机危货溢价示意；无稳定TUN危货公开指数",
-   "lastMile": "空卡（货机中转）",
    "season": "仅货机",
-   "note": "危货整机/锂电池仅货机；公开牌价稀缺，区间为推算；务必货代实询；公开市场参考非可成交价",
+   "note": "危货整机/锂电池仅货机；公开牌价稀缺，区间为推算；务必货代实询；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-突尼斯-空运-整机危险品"
   },
   {
@@ -729,12 +1343,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "7.0–9.0",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "机场到机场",
+   "tier": "待确认（BSI 非洲线区间）",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "6-12",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "经欧/中东中转（中转点待确认）",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "空卡（中转）",
+   "rtype": "背景参考",
+   "pub": "BSI 标注2026年更新（具体日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "待核实",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "BSI非洲线≈8.06–8.80；北非经欧/中东中转",
-   "lastMile": "空卡（中转）",
    "season": "",
-   "note": "公开市场参考非可成交价",
+   "note": "公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-摩洛哥-空运-整机普货"
   },
   {
@@ -748,12 +1382,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "3.7–6.5",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "机场到机场",
+   "tier": "FAX 指数不分重量档；Seabay 牌价重量档待确认",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "3-6",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "当期行情",
+   "pub": "FAX 当期页面（发布日待核实）；Seabay（发布日待核实，到期 10-19/21）",
+   "collected": "2026-10-15",
+   "validity": "2026-10-19～10-21（Seabay 牌价到期日，取最早）；FAX 为指数无有效期",
+   "validEnd": "2026-10-19",
    "cycle": "2026-W41",
    "source": "Freightos FAX CN-ME≈3.68；Seabay PVG→DWC≈5.2–6.6（2026-10-19/21）",
-   "lastMile": "直达/少中转",
    "season": "",
-   "note": "指数偏低、牌价偏高均常见；取区间；公开市场参考非可成交价",
+   "note": "指数偏低、牌价偏高均常见，区间两端来源不同；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-迪拜-空运-整机普货"
   },
   {
@@ -767,12 +1421,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "4.5–6.5",
    "ccy": "USD",
+   "basis": "区域指数",
+   "method": "",
+   "scope": "机场到机场",
+   "tier": "FAX 指数不分重量档；BSI 中东线重量档待确认",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "4-7",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "当期行情",
+   "pub": "FAX 中东当期页面（发布日待核实）；BSI 标注2026年更新",
+   "collected": "2026-10-15",
+   "validity": "不适用（指数/行情，无报价有效期）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "BSI中东线≈5.57–6.30；FAX中东为底",
-   "lastMile": "直达/少中转",
    "season": "",
-   "note": "公开市场参考非可成交价",
+   "note": "公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "深圳-利雅得-空运-整机普货"
   },
   {
@@ -786,12 +1460,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "7.5–9.5",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "北非/非洲公开普货区间估算（拆电池后整机按普货）；原始依据：北非/非洲公开普货区间估算（拆电池后整机按普货）",
+   "scope": "机场到机场",
+   "tier": "待确认",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "6-12",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "经中转（中转点待确认）",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "空卡（中转）",
+   "rtype": "背景参考",
+   "pub": "无稳定公开指数（日期待核实）",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "北非/非洲公开普货区间估算（拆电池后整机按普货）",
-   "lastMile": "空卡（中转）",
    "season": "",
-   "note": "若电池已拆出单独运，整机可按普货；公开市场参考非可成交价",
+   "note": "若电池已拆出单独运，整机可按普货；公开参考，非可成交价；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-突尼斯-空运-整机普货"
   },
   {
@@ -805,12 +1499,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "4.0–6.5",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "以欧亚枢纽公开行情为底估算；原始依据：公开CIS/俄线牌价波动大；以欧亚枢纽公开行情为底估算",
+   "scope": "机场到机场",
+   "tier": "待确认",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "5-10",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "背景参考",
+   "pub": "日期待核实",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "公开CIS/俄线牌价波动大；以欧亚枢纽公开行情为底估算",
-   "lastMile": "直达/少中转",
    "season": "合规路由",
-   "note": "注意出口管制与航线合规；公开市场参考非可成交价；建议实询",
+   "note": "注意出口管制与航线合规；公开参考，非可成交价；建议实询；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "郑州-莫斯科-空运-整机普货"
   },
   {
@@ -824,12 +1538,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "5.0–7.0",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "中亚线公开货代区间估算；原始依据：无独立FAX分项；中亚线公开货代区间估算",
+   "scope": "机场到机场",
+   "tier": "待确认",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "5-9",
+   "tbound": "机场到机场（v1.1 口径推定）",
+   "route": "待确认",
+   "via": "无",
+   "lastMode": "无",
+   "inlandCost": "不适用（目的机场即口岸）",
+   "inlandBasis": "",
+   "inlandTime": "不适用",
+   "full": "",
+   "legacyTag": "直达/少中转",
+   "rtype": "背景参考",
+   "pub": "日期待核实",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "无独立FAX分项；中亚线公开货代区间估算",
-   "lastMile": "直达/少中转",
    "season": "",
-   "note": "公开市场参考非可成交价；建议货代实询",
+   "note": "公开参考，非可成交价；建议货代实询；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-阿斯塔纳-空运-整机普货"
   },
   {
@@ -843,12 +1577,32 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    "unit": "USD/kg",
    "price": "5.5–8.0",
    "ccy": "USD",
+   "basis": "模型估算",
+   "method": "邻近枢纽（ALA）估算；原始依据：常经ALA；无直达公开指数，邻近枢纽估算",
+   "scope": "到指定城市（含末段卡运估算，未拆分）",
+   "tier": "待确认",
+   "equip": "不适用（空运）",
+   "oversize": "待确认（来源未说明是否适用超尺寸/不可堆叠整机）",
    "transit": "6-11",
+   "tbound": "待确认",
+   "route": "常经ALA中转",
+   "via": "ALA",
+   "lastMode": "卡车",
+   "inlandCost": "未单列，已含于估算（金额待核实）",
+   "inlandBasis": "估算",
+   "inlandTime": "待核实",
+   "full": "待核实（主段与内陆/末段须均有数据才显示）",
+   "legacyTag": "空卡（经ALA）",
+   "rtype": "背景参考",
+   "pub": "日期待核实",
+   "collected": "2026-10-15",
+   "validity": "不适用（估算值，随基础数据更新）",
+   "validEnd": "",
    "cycle": "2026-W41",
    "source": "常经ALA；无直达公开指数，邻近枢纽估算",
-   "lastMile": "空卡（经ALA）",
    "season": "常经阿拉木图",
-   "note": "公开市场参考非可成交价；建议货代实询",
+   "note": "公开参考，非可成交价；建议货代实询；用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。",
+   "legacyTime": "",
    "id": "上海-比什凯克-空运-整机普货"
   }
  ],
@@ -862,251 +1616,286 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
       4.7,
       6.0
      ],
-     "text": "4.7–6.0"
+     "text": "4.7–6.0",
+     "basis": "区域指数"
     },
     "上海-马赛-海运-整机普货": {
      "range": [
       95.0,
       165.0
      ],
-     "text": "95–165"
+     "text": "95–165",
+     "basis": "区域指数"
     },
     "上海-马赛-海运-整机危险品": {
      "range": [
       4500.0,
       5300.0
      ],
-     "text": "4,500–5,300"
+     "text": "4,500–5,300",
+     "basis": "模型估算"
     },
     "上海-波尔多-空运-整机普货": {
      "range": [
       5.0,
       6.5
      ],
-     "text": "5.0–6.5"
+     "text": "5.0–6.5",
+     "basis": "模型估算"
     },
     "上海-意大利-空运-整机普货": {
      "range": [
       4.7,
       6.0
      ],
-     "text": "4.7–6.0"
+     "text": "4.7–6.0",
+     "basis": "区域指数"
     },
     "宁波-比利时-海运-整机普货": {
      "range": [
       85.0,
       145.0
      ],
-     "text": "85–145"
+     "text": "85–145",
+     "basis": "区域指数"
     },
     "上海-波兰-空运-整机普货": {
      "range": [
       5.0,
       6.5
      ],
-     "text": "5.0–6.5"
+     "text": "5.0–6.5",
+     "basis": "模型估算"
     },
     "上海-黑山-空运-整机普货": {
      "range": [
       6.0,
       7.5
      ],
-     "text": "6.0–7.5"
+     "text": "6.0–7.5",
+     "basis": "模型估算"
     },
     "上海-波黑-空运-整机普货": {
      "range": [
       6.0,
       7.5
      ],
-     "text": "6.0–7.5"
+     "text": "6.0–7.5",
+     "basis": "模型估算"
     },
     "上海-意大利-海运-整机普货": {
      "range": [
       95.0,
       165.0
      ],
-     "text": "95–165"
+     "text": "95–165",
+     "basis": "区域指数"
     },
     "上海-比利时-海运-整机危险品": {
      "range": [
       4100.0,
       4900.0
      ],
-     "text": "4,100–4,900"
+     "text": "4,100–4,900",
+     "basis": "模型估算"
     },
     "深圳-马尼拉-空运-整机普货": {
      "range": [
       2.0,
       4.0
      ],
-     "text": "2.0–4.0"
+     "text": "2.0–4.0",
+     "basis": "区域指数"
     },
     "上海-雅加达-海运-整机普货": {
      "range": [
       30.0,
       60.0
      ],
-     "text": "30–60"
+     "text": "30–60",
+     "basis": "区域指数"
     },
     "深圳-曼谷-空运-整机普货": {
      "range": [
       2.0,
       4.0
      ],
-     "text": "2.0–4.0"
+     "text": "2.0–4.0",
+     "basis": "区域指数"
     },
     "深圳-吉隆坡-空运-整机普货": {
      "range": [
       2.0,
       4.0
      ],
-     "text": "2.0–4.0"
+     "text": "2.0–4.0",
+     "basis": "区域指数"
     },
     "深圳-胡志明-海运-整机普货": {
      "range": [
       15.0,
       35.0
      ],
-     "text": "15–35"
+     "text": "15–35",
+     "basis": "区域指数"
     },
     "深圳-胡志明-海运-整机危险品": {
      "range": [
       400.0,
       800.0
      ],
-     "text": "400–800"
+     "text": "400–800",
+     "basis": "模型估算"
     },
     "上海-雅加达-海运-整机危险品": {
      "range": [
       700.0,
       1500.0
      ],
-     "text": "700–1,500"
+     "text": "700–1,500",
+     "basis": "模型估算"
     },
     "上海-布宜诺斯艾利斯-空运-整机普货": {
      "range": [
       8.5,
       9.5
      ],
-     "text": "8.5–9.5"
+     "text": "8.5–9.5",
+     "basis": "区域指数"
     },
     "上海-智利-海运-整机普货": {
      "range": [
       150.0,
       250.0
      ],
-     "text": "150–250"
+     "text": "150–250",
+     "basis": "模型估算"
     },
     "上海-智利-海运-整机危险品": {
      "range": [
       7000.0,
       12000.0
      ],
-     "text": "7,000–12,000"
+     "text": "7,000–12,000",
+     "basis": "模型估算"
     },
     "上海-圣保罗-空运-整机普货": {
      "range": [
       8.5,
       11.5
      ],
-     "text": "8.5–11.5"
+     "text": "8.5–11.5",
+     "basis": "公开报价"
     },
     "上海-圣保罗-海运-整机普货": {
      "range": [
       90.0,
       220.0
      ],
-     "text": "90–220"
+     "text": "90–220",
+     "basis": "公开报价"
     },
     "上海-圣保罗-海运-整机危险品": {
      "range": [
       7000.0,
       9500.0
      ],
-     "text": "7,000–9,500"
+     "text": "7,000–9,500",
+     "basis": "模型估算"
     },
     "上海-巴西利亚-空运-整机普货": {
      "range": [
       9.5,
       13.0
      ],
-     "text": "9.5–13.0"
+     "text": "9.5–13.0",
+     "basis": "模型估算"
     },
     "上海-巴西利亚-海运-整机普货": {
      "range": [
       90.0,
       220.0
      ],
-     "text": "90–220（港到港，不含内陆）"
+     "text": "90–220",
+     "basis": "公开报价"
     },
     "上海-巴西利亚-海运-整机危险品": {
      "range": [
       7000.0,
       9500.0
      ],
-     "text": "7,000–9,500（港到港，不含内陆）"
+     "text": "7,000–9,500",
+     "basis": "模型估算"
     },
     "上海-突尼斯-空运-整机危险品": {
      "range": [
       9.0,
       13.0
      ],
-     "text": "9.0–13.0"
+     "text": "9.0–13.0",
+     "basis": "模型估算"
     },
     "上海-摩洛哥-空运-整机普货": {
      "range": [
       7.0,
       9.0
      ],
-     "text": "7.0–9.0"
+     "text": "7.0–9.0",
+     "basis": "区域指数"
     },
     "上海-迪拜-空运-整机普货": {
      "range": [
       3.7,
       6.5
      ],
-     "text": "3.7–6.5"
+     "text": "3.7–6.5",
+     "basis": "区域指数"
     },
     "深圳-利雅得-空运-整机普货": {
      "range": [
       4.5,
       6.5
      ],
-     "text": "4.5–6.5"
+     "text": "4.5–6.5",
+     "basis": "区域指数"
     },
     "上海-突尼斯-空运-整机普货": {
      "range": [
       7.5,
       9.5
      ],
-     "text": "7.5–9.5"
+     "text": "7.5–9.5",
+     "basis": "模型估算"
     },
     "郑州-莫斯科-空运-整机普货": {
      "range": [
       4.0,
       6.5
      ],
-     "text": "4.0–6.5"
+     "text": "4.0–6.5",
+     "basis": "模型估算"
     },
     "上海-阿斯塔纳-空运-整机普货": {
      "range": [
       5.0,
       7.0
      ],
-     "text": "5.0–7.0"
+     "text": "5.0–7.0",
+     "basis": "模型估算"
     },
     "上海-比什凯克-空运-整机普货": {
      "range": [
       5.5,
       8.0
      ],
-     "text": "5.5–8.0"
+     "text": "5.5–8.0",
+     "basis": "模型估算"
     }
    }
   }
  ],
  "trends": {
-  "note": "仅展示经核实的公开数据点（2026-06 ～ 2026-10），缺失周不插补；悬停数据点查看日期与说明",
+  "note": "实心点 = 来源直接公布的值；空心点 = 由下一期公布的涨跌额反推的值（分别计数）；缺失期不插补。有具体文章链接的点可点击打开，无链接的点暂未逐点核对出处。",
   "series": [
    {
     "name": "SCFI 欧洲航线（基本港）",
@@ -1119,79 +1908,98 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
     "points": [
      {
       "date": "2026-06-12",
-      "value": 5018
+      "value": 5018,
+      "derived": false
      },
      {
       "date": "2026-06-19",
-      "value": 5132
+      "value": 5132,
+      "derived": false
      },
      {
       "date": "2026-06-26",
-      "value": 5766
+      "value": 5766,
+      "derived": false
      },
      {
       "date": "2026-07-03",
-      "value": 5797
+      "value": 5797,
+      "derived": false
      },
      {
       "date": "2026-07-10",
       "value": 5616,
-      "note": "由 07-17 期公布的周跌额反推"
+      "note": "由 07-17 期公布的周跌额反推",
+      "derived": true
      },
      {
       "date": "2026-07-17",
-      "value": 5422
+      "value": 5422,
+      "derived": false
      },
      {
       "date": "2026-07-24",
-      "value": 5247
+      "value": 5247,
+      "derived": false
      },
      {
       "date": "2026-07-31",
-      "value": 5053
+      "value": 5053,
+      "derived": false
      },
      {
       "date": "2026-08-07",
-      "value": 4934
+      "value": 4934,
+      "derived": false
      },
      {
       "date": "2026-08-14",
-      "value": 4811
+      "value": 4811,
+      "derived": false
      },
      {
       "date": "2026-08-21",
-      "value": 4663
+      "value": 4663,
+      "derived": false
      },
      {
       "date": "2026-08-28",
-      "value": 4321
+      "value": 4321,
+      "derived": false
      },
      {
       "date": "2026-09-04",
       "value": 4218,
-      "note": "由 09-11 期公布的周跌额反推"
+      "note": "由 09-11 期公布的周跌额反推",
+      "derived": true
      },
      {
       "date": "2026-09-11",
-      "value": 3938
+      "value": 3938,
+      "derived": false
      },
      {
       "date": "2026-09-18",
-      "value": 3683
+      "value": 3683,
+      "derived": false
      },
      {
       "date": "2026-09-24",
-      "value": 3547
+      "value": 3547,
+      "derived": false
      },
      {
       "date": "2026-09-30",
-      "value": 3378
+      "value": 3378,
+      "derived": false
      },
      {
       "date": "2026-10-09",
-      "value": 3455
+      "value": 3455,
+      "derived": false
      }
-    ]
+    ],
+    "seriesUrlNote": "系列级出处为搜索页，非具体文章；逐点文章链接待补"
    },
    {
     "name": "SCFI 地中海航线（基本港）",
@@ -1204,79 +2012,98 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
     "points": [
      {
       "date": "2026-06-12",
-      "value": 5968
+      "value": 5968,
+      "derived": false
      },
      {
       "date": "2026-06-19",
-      "value": 6134
+      "value": 6134,
+      "derived": false
      },
      {
       "date": "2026-06-26",
-      "value": 6900
+      "value": 6900,
+      "derived": false
      },
      {
       "date": "2026-07-03",
-      "value": 6985
+      "value": 6985,
+      "derived": false
      },
      {
       "date": "2026-07-10",
       "value": 6655,
-      "note": "由 07-17 期公布的周跌额反推"
+      "note": "由 07-17 期公布的周跌额反推",
+      "derived": true
      },
      {
       "date": "2026-07-17",
-      "value": 6358
+      "value": 6358,
+      "derived": false
      },
      {
       "date": "2026-07-24",
-      "value": 6160
+      "value": 6160,
+      "derived": false
      },
      {
       "date": "2026-07-31",
-      "value": 5913
+      "value": 5913,
+      "derived": false
      },
      {
       "date": "2026-08-07",
-      "value": 5730
+      "value": 5730,
+      "derived": false
      },
      {
       "date": "2026-08-14",
-      "value": 5457
+      "value": 5457,
+      "derived": false
      },
      {
       "date": "2026-08-21",
-      "value": 5094
+      "value": 5094,
+      "derived": false
      },
      {
       "date": "2026-08-28",
-      "value": 4664
+      "value": 4664,
+      "derived": false
      },
      {
       "date": "2026-09-04",
       "value": 4527,
-      "note": "由 09-11 期公布的周跌额反推"
+      "note": "由 09-11 期公布的周跌额反推",
+      "derived": true
      },
      {
       "date": "2026-09-11",
-      "value": 4304
+      "value": 4304,
+      "derived": false
      },
      {
       "date": "2026-09-18",
-      "value": 4074
+      "value": 4074,
+      "derived": false
      },
      {
       "date": "2026-09-24",
-      "value": 3916
+      "value": 3916,
+      "derived": false
      },
      {
       "date": "2026-09-30",
-      "value": 3771
+      "value": 3771,
+      "derived": false
      },
      {
       "date": "2026-10-09",
-      "value": 3790
+      "value": 3790,
+      "derived": false
      }
-    ]
+    ],
+    "seriesUrlNote": "系列级出处为搜索页，非具体文章；逐点文章链接待补"
    },
    {
     "name": "Freightos FAX 中国→北欧 空运",
@@ -1289,71 +2116,89 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
     "points": [
      {
       "date": "2026-06-16",
-      "value": 4.62
+      "value": 4.62,
+      "derived": false
      },
      {
       "date": "2026-06-23",
-      "value": 4.62
+      "value": 4.62,
+      "derived": false
      },
      {
       "date": "2026-06-30",
-      "value": 4.55
+      "value": 4.55,
+      "derived": false
      },
      {
       "date": "2026-07-08",
-      "value": 4.21
+      "value": 4.21,
+      "derived": false
      },
      {
       "date": "2026-07-21",
-      "value": 4.25
+      "value": 4.25,
+      "derived": false
      },
      {
       "date": "2026-07-29",
-      "value": 3.84
+      "value": 3.84,
+      "derived": false
      },
      {
       "date": "2026-08-06",
-      "value": 4.02
+      "value": 4.02,
+      "derived": false
      },
      {
       "date": "2026-08-18",
-      "value": 4.45
+      "value": 4.45,
+      "derived": false
      },
      {
       "date": "2026-08-25",
-      "value": 4.58
+      "value": 4.58,
+      "derived": false
      },
      {
       "date": "2026-09-01",
-      "value": 4.61
+      "value": 4.61,
+      "derived": false
      },
      {
       "date": "2026-09-09",
       "value": 4.88,
-      "note": "周报正文“Far East→Europe”口径"
+      "note": "周报正文“Far East→Europe”口径",
+      "derived": false
      },
      {
       "date": "2026-09-15",
       "value": 5.25,
-      "note": "周报正文“Far East→Europe”口径"
+      "note": "周报正文“Far East→Europe”口径",
+      "derived": false
      },
      {
       "date": "2026-09-24",
-      "value": 4.3
+      "value": 4.3,
+      "derived": false
      },
      {
       "date": "2026-09-30",
-      "value": 4.14
+      "value": 4.14,
+      "derived": false
      },
      {
       "date": "2026-10-07",
-      "value": 3.83
+      "value": 3.83,
+      "derived": false
      },
      {
       "date": "2026-10-13",
-      "value": 3.58
+      "value": 3.58,
+      "derived": false,
+      "url": "https://www.freightos.com/freight-resources/attacks-disrupt-saudi-air-cargo-china-europe-air-rates-slump-october-13-2026-update/"
      }
-    ]
+    ],
+    "seriesUrlNote": "该链接为系列级出处"
    },
    {
     "name": "Freightos FBX11 亚洲→北欧 海运",
@@ -1366,53 +2211,67 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
     "points": [
      {
       "date": "2026-06-23",
-      "value": 4741
+      "value": 4741,
+      "derived": false
      },
      {
       "date": "2026-06-30",
-      "value": 4883
+      "value": 4883,
+      "derived": false
      },
      {
       "date": "2026-07-08",
-      "value": 5384
+      "value": 5384,
+      "derived": false
      },
      {
       "date": "2026-07-21",
-      "value": 5740
+      "value": 5740,
+      "derived": false
      },
      {
       "date": "2026-07-29",
-      "value": 5575
+      "value": 5575,
+      "derived": false
      },
      {
       "date": "2026-08-06",
-      "value": 5531
+      "value": 5531,
+      "derived": false
      },
      {
       "date": "2026-08-25",
-      "value": 4699
+      "value": 4699,
+      "derived": false
      },
      {
       "date": "2026-09-01",
-      "value": 4641
+      "value": 4641,
+      "derived": false
      },
      {
       "date": "2026-09-24",
-      "value": 3702
+      "value": 3702,
+      "derived": false
      },
      {
       "date": "2026-09-30",
-      "value": 3376
+      "value": 3376,
+      "derived": false
      },
      {
       "date": "2026-10-07",
-      "value": 3260
+      "value": 3260,
+      "derived": false
      },
      {
       "date": "2026-10-13",
-      "value": 3260
+      "value": 3260,
+      "derived": false,
+      "url": "https://www.ajot.com/news/freightos-weekly-update-attacks-disrupt-saudi-air-cargo-china-europe-air-rates-slump"
      }
-    ]
+    ],
+    "seriesUrlNote": "该链接为系列级出处"
    },
    {
     "name": "Freightos FBX13 亚洲→地中海 海运",
@@ -1425,53 +2284,67 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
     "points": [
      {
       "date": "2026-06-23",
-      "value": 6308
+      "value": 6308,
+      "derived": false
      },
      {
       "date": "2026-06-30",
-      "value": 6423
+      "value": 6423,
+      "derived": false
      },
      {
       "date": "2026-07-08",
-      "value": 7100
+      "value": 7100,
+      "derived": false
      },
      {
       "date": "2026-07-21",
-      "value": 6852
+      "value": 6852,
+      "derived": false
      },
      {
       "date": "2026-07-29",
-      "value": 6697
+      "value": 6697,
+      "derived": false
      },
      {
       "date": "2026-08-06",
-      "value": 6554
+      "value": 6554,
+      "derived": false
      },
      {
       "date": "2026-08-25",
-      "value": 4976
+      "value": 4976,
+      "derived": false
      },
      {
       "date": "2026-09-01",
-      "value": 4800
+      "value": 4800,
+      "derived": false
      },
      {
       "date": "2026-09-24",
-      "value": 3881
+      "value": 3881,
+      "derived": false
      },
      {
       "date": "2026-09-30",
-      "value": 3620
+      "value": 3620,
+      "derived": false
      },
      {
       "date": "2026-10-07",
-      "value": 3555
+      "value": 3555,
+      "derived": false
      },
      {
       "date": "2026-10-13",
-      "value": 3804
+      "value": 3804,
+      "derived": false,
+      "url": "https://www.ajot.com/news/freightos-weekly-update-attacks-disrupt-saudi-air-cargo-china-europe-air-rates-slump"
      }
-    ]
+    ],
+    "seriesUrlNote": "该链接为系列级出处"
    },
    {
     "name": "Freightos FAX 中国→中东 空运",
@@ -1485,14 +2358,21 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
      {
       "date": "2026-10-15",
       "value": 3.68,
-      "note": "页面当期值（访问于 10-15）"
+      "note": "页面当期值（访问于 10-15）",
+      "derived": false,
+      "url": "https://www.freightos.com/enterprise/terminal/fax-greater-china-asia-to-middle-east/"
      }
-    ]
+    ],
+    "seriesUrlNote": "该链接为系列级出处"
    }
   ]
  },
  "about": {
   "usage": [
+   [
+    "⚠ 报价条件待确认",
+    "当前价格来自公开信息，多数来源未注明报价对应的条件。空运价格（USD/kg）未说明计费重量档（如 ≥100kg / ≥300kg / ≥1000kg），也未说明是否适用于超尺寸、不可堆叠的整机；海运“40尺”指数未区分 40GP 与 40HQ（仅桑托斯部分线路注明 40GP）。因此这些字段标为“待确认”，不同线路之间不宜直接比价，也不代表针对我们整机的报价。待取得货代实际报价后优化。"
+   ],
    [
     "定位",
     "给销售谈判用的公开市场运费参考看板。所有价格均为公开市场参考，非本公司可成交价，最终以货代实报为准。"
@@ -1511,23 +2391,23 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    ],
    [
     "参考单价读法",
-    "单元格为区间（如 4.7–6.0），表示公开市场常见参考区间；销售对外可报区间中值作谈判起点，并明确「待货代实报」。"
+    "单元格为区间（如 4.7–6.0），表示公开市场常见参考区间，区间两端可能来自不同来源、重量档或服务范围。用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。"
    ],
    [
     "危货溢价",
-    "海运危柜在普柜 SCFI 基础上另加 Class 9/锂电池危柜附加费（市场常见约 +20%～40% 或按票加收），表中已用示意溢价估算，实报以船司危品价目为准。空运危货/货机通常再加 30%～100%+，且瓦时超限只能货机。"
+    "海运危柜在普柜 SCFI 基础上另加 Class 9/锂电池危柜附加费（市场常见约 +20%～40% 或按票加收），表中已用示意溢价估算（价格依据标为「模型估算」），实报以船司危品价目为准。空运危货/货机通常再加 30%～100%+，且瓦时超限只能货机。"
    ],
    [
     "末段衔接",
-    "直达/少中转 = 口岸级可直达或一票到底；空卡 = 空运到枢纽再卡运；海卡 = 海运到枢纽港再支线/卡运。偏线城市无直达公开价时用邻近枢纽价。"
+    "v1.2 起拆为三个独立字段：路径（直达 / 经某机场或港口中转 / 待确认）、末段方式（航空 / 卡车 / 铁路 / 无）、时效边界（机场到机场 / 港到港 / 到指定城市）。v1.1 的「直达/少中转、空卡、海卡」标签保留在「原末段衔接标签(v1.1)」列。偏线城市无直达公开价时用邻近枢纽价，并标「模型估算」。"
    ],
    [
     "销售怎么用",
     "1）按目的城市+运输方式筛行；2）用参考单价×预估计费重/CBM/柜型做粗算；3）加目的港杂费、清关、保险（表内一般不含）；4）谈判时注明「公开参考非承诺价」。"
    ],
    [
-    "待填含义",
-    "若参考单价为「待填」，表示该偏线暂无稳定公开指数/牌价，勿编造；可用邻近枢纽行 + 末段衔接估算，并尽快找货代询价。"
+    "待询价含义",
+    "若某线路没有任何公开数据，参考单价标「待询价」，勿编造；可参考邻近枢纽行，但须标「模型估算」并写明方法，并尽快找货代询价。"
    ],
    [
     "不含内容",
@@ -1535,11 +2415,31 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    ],
    [
     "巴西内陆",
-    "圣保罗按 GRU（空运）/Santos（海运）；巴西利亚为内陆城市：空运经 GRU/VCP 转运（空卡），海运价仅为 Santos 港到港，内陆拖运（危货需危运资质）、清关地选择另计，须向货代实询。"
+    "圣保罗按 GRU（空运）/Santos（海运）；巴西利亚为内陆城市：海运主段仅为 Santos 港到港，内陆段（含危货运输资质）单列，无公开价标「待询价」；空运经 GRU/VCP 转运，转运段为估算。清关地选择另计，须向货代实询。"
    ],
    [
     "维护人",
     "商务侧关务/物流；按「新增城市规范」加行；有公开新价时只更新该行的参考单价、数据周期、数据来源。"
+   ],
+   [
+    "数据周期",
+    "数据周期 2026-W41（每两周更新）。v1.2 只调整字段结构和标注，未新增任何价格数字或来源；各行单独标注来源发布日期、采集日期和报价有效期。"
+   ],
+   [
+    "价格依据（四类）",
+    "公开报价：该线路本身有公开牌价；区域指数：区域/航线级指数或公开区域行情，非该城市单独报价；模型估算：在公开数据上叠加危柜溢价、邻近枢纽、转运段推算，估算方法见「估算方法」列；待询价：无公开数据。同一行混用多种来源时，按较弱的一类标注。"
+   ],
+   [
+    "主段/内陆段/全程",
+    "价格与时效必须对应同一范围：主段（机场到机场或港到港）；内陆/末段（费用、时效，缺数据标「待核实/待询价」）；全程仅在主段与末段均有数据，或目的地即口岸时才显示。"
+   ],
+   [
+    "计费重档与柜型",
+    "空运标注价格对应的计费重档（如 >100kg、100–300kg、≥1000kg）及是否适用超尺寸/不可堆叠整机；海运整柜标 40GP 或 40HQ；来源未说明的标「待确认」。"
+   ],
+   [
+    "记录类型与有效状态",
+    "当期行情：本周期内的指数/牌价；背景参考：年度或未标日期的行业文章，不代表本期运价；已过期：报价有效期已过，或采集日超过两个更新周期（28 天）未更新。过期数据保留历史，并明确标示。"
    ],
    [
     "重要声明",
@@ -1573,15 +2473,23 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    ],
    [
     "缺数处理",
-    "无直达公开价时填邻近枢纽价，末段衔接标空卡/海卡"
+    "无公开数据的一律标「待询价/待核实」，不得编造；无直达公开价时可用邻近枢纽价，须标「模型估算」并写明估算方法。"
    ],
    [
     "巴西内陆",
-    "巴西利亚等内陆城市：海运价=Santos港到港，海卡/内陆拖运另询；空运经GRU/VCP标空卡"
+    "巴西利亚等内陆城市：海运主段=Santos港到港，内陆段单列，无公开价标「待询价」；空运经GRU/VCP，转运段为估算。"
    ],
    [
     "本版数据",
-    "v1.1（2026-W41）：已移除误录行；新增圣保罗、巴西利亚（空运/海运普货/海运危货）。来源 SCFI 2026-10-09、Freightos FAX、BSI/Seabay 牌价、Sino-Shipping/DTFU/Flexport LCL、Global Resources 南美周报"
+    "v1.2（数据周期仍为 2026-W41）：在 v1.1 基础上拆分主段/内陆段、补充重量档与柜型、拆分路径/末段方式/时效边界、增加价格依据与逐行日期字段、增加覆盖矩阵；未新增价格数字或来源。"
+   ],
+   [
+    "逐行日期",
+    "每次更新每行都要填：来源发布日期、采集日期、报价有效期（有到期日的填到期日）；年度行业文章标「背景参考」。"
+   ],
+   [
+    "趋势点",
+    "直接公布值与由下一期涨跌额反推的值分开记录（网页实心点/空心点）；有具体文章链接才填，不得使用搜索页代替。"
    ]
   ],
   "fields": [
@@ -1603,15 +2511,67 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    ],
    [
     "参考单价",
-    "公开市场参考区间（非可成交价）；有稳定公开数据则填区间，否则「待填」并说明原因"
+    "公开市场参考区间（非可成交价，用于内部初步预算）；无数据则标「待询价」并说明原因"
    ],
    [
-    "末段衔接",
-    "直达/少中转；无直达则标空卡或海卡，并注明经转枢纽。空卡=空运到枢纽再卡运；海卡=海运到枢纽港再卡运/支线"
+    "原末段衔接标签(v1.1)",
+    "v1.1 标签，保留备查；v1.2 起以「路径、末段方式、时效边界」三列为准"
    ],
    [
     "销售使用说明",
-    "须告知：公开参考，最终以货代实报为准"
+    "统一提示：用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价"
+   ],
+   [
+    "价格依据",
+    "公开报价 / 区域指数 / 模型估算 / 待询价"
+   ],
+   [
+    "估算方法",
+    "仅模型估算行填写：基础数据 + 推算方式"
+   ],
+   [
+    "价格范围",
+    "价格对应的服务范围：机场到机场 / 港到港 / 到指定城市"
+   ],
+   [
+    "计费重档",
+    "空运价格对应的重量档；来源未说明填「待确认」"
+   ],
+   [
+    "柜型",
+    "海运：拼箱 LCL，或整柜 40GP/40HQ；未区分填「待确认」"
+   ],
+   [
+    "路径",
+    "直达 / 经某机场或港口中转 / 待确认"
+   ],
+   [
+    "末段方式",
+    "航空 / 卡车 / 铁路 / 无 / 待确认"
+   ],
+   [
+    "时效边界",
+    "主段时效对应的范围：机场到机场 / 港到港 / 到指定城市"
+   ],
+   [
+    "内陆/末段费用、时效",
+    "内陆段单列；缺数据填「待核实/待询价」"
+   ],
+   [
+    "全程",
+    "仅在主段与内陆段均有数据，或目的口岸即目的地时显示"
+   ],
+   [
+    "记录类型",
+    "当期行情 / 背景参考（年度或未标日期文章）"
+   ],
+   [
+    "来源发布日期 / 采集日期 / 报价有效期",
+    "逐行填写；有效期已过标「已过期」，数据保留"
+   ],
+   [
+    "有效状态",
+    "有效 / 背景参考 / 已过期"
    ]
   ],
   "sources": [
@@ -1737,12 +2697,17 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
    ]
   ],
   "gaps": [
-   "1. 黑山/波黑/比什凯克/阿斯塔纳等偏线：无独立公开指数，表中为邻近枢纽推算，置信度低于干线。",
+   "1. 黑山/波黑/比什凯克/阿斯塔纳等偏线：无独立公开指数，表中为邻近枢纽推算，不确定性高于干线。",
    "2. 突尼斯危货货机：公开牌价极少，9–13为「非洲普货+货机危货溢价」示意，谈判前必须实询。",
    "3. 南美西岸LCL与危柜：公开连续报价少，区间宽；SCFI南美子航线波动大；Santos LCL来源间差异大（90～380）。",
    "4. 巴西利亚：内陆城市，无PVG→BSB公开牌价；空运为GRU价+转运推算，海运仅Santos港到港，内陆拖运（含危货）无公开价；SCFI Santos 10-09官网数值未能提取，用9/30及周报替代。",
    "5. FAX为滚动全货重段指数，Seabay为即期牌价，二者不可直接等同，故空运多用区间。",
-   "6. 本版无「待填」单价行；偏线以推算区间代替，并在销售使用说明中标明须实询。"
+   "6. 本版无「待询价」单价行；偏线以推算区间代替，并在销售使用说明中标明须实询。",
+   "7. 逐行来源发布日期与报价有效期：除 SCFI（2026-10-09）、SCFI 南美（2026-09-30）、Seabay 牌价到期日外，多数来源发布日期待核实。",
+   "8. 重量档与柜型：空运多数来源未说明是否适用超尺寸/不可堆叠整机；整柜 SCFI 未区分 40GP/40HQ，均标「待确认」。",
+   "9. 趋势图逐点出处：目前仅少数点有具体文章链接，其余未能逐点核对，不使用搜索页代替。",
+   "10. 巴西利亚内陆段（含危险品运输资质）无公开价，标「待询价」。",
+   "11. 年度/未标日期的行业文章（BSI 指南、LCL 费率文等）仅作「背景参考」，不代表本期运价。"
   ]
  }
 }</script>
@@ -1750,7 +2715,7 @@ footer{color:var(--sub);font-size:12px;text-align:center;padding:30px 0 40px}
 (function(){
 const D=JSON.parse(document.getElementById('data').textContent);
 const $=s=>document.querySelector(s), esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const st={q:'',origin:'',mode:'',cargo:'',region:'',view:'cards',sort:null,asc:true};
+const st={q:'',origin:'',mode:'',cargo:'',region:'',basis:'',stat:'',view:'cards',sort:null,asc:true};
 const snaps=D.snapshots.slice().sort((a,b)=>a.cycle<b.cycle?-1:1), latest=snaps[snaps.length-1];
 $('#cycleTxt').textContent='数据周期 '+latest.cycle;
 $('#cycleSub').textContent=D.meta.cadence+'，'+D.meta.cycleRange;
@@ -1759,19 +2724,21 @@ const tip=$('#tip');
 function showTip(e,h){tip.innerHTML=h;tip.style.opacity=1;const x=Math.min(e.clientX+12,innerWidth-tip.offsetWidth-8);tip.style.left=x+'px';tip.style.top=(e.clientY-36)+'px'}
 function hideTip(){tip.style.opacity=0}
 // filters
-const origins=[...new Set(D.routes.map(r=>r.origin))];
+const OORD=['上海','宁波','郑州','深圳'];const origins=[...new Set([...OORD,...D.routes.map(r=>r.origin)])];
 $('#origin').innerHTML='<option value="">全部起运地</option>'+origins.map(o=>`<option>${esc(o)}</option>`).join('');
 const regions=[...new Set(D.routes.map(r=>r.region))];
 function segBind(id,key){$(id).addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;st[key]=b.dataset.v;[...$(id).children].forEach(x=>x.classList.toggle('on',x===b));render()})}
 segBind('#mode','mode');segBind('#cargo','cargo');segBind('#view','view');
 $('#q').addEventListener('input',e=>{st.q=e.target.value.trim().toLowerCase();render()});
 $('#origin').addEventListener('change',e=>{st.origin=e.target.value;render()});
+$('#basis').addEventListener('change',e=>{st.basis=e.target.value;render()});
+$('#stat').addEventListener('change',e=>{st.stat=e.target.value;render()});
 function renderChips(){
  const c=r=>D.routes.filter(x=>!r||x.region===r).length;
  $('#regions').innerHTML=['',...regions].map(r=>`<button class="chip ${st.region===r?'on':''}" data-v="${esc(r)}">${r||'全部大区'}<span class="n">${c(r)}</span></button>`).join('')+'<span class="sp"></span><button class="btn no-print" id="reset">重置筛选</button><button class="btn no-print" id="print">🖨 打印 / PDF</button>';
 }
 $('#regions').addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
- if(b.id==='reset'){Object.assign(st,{q:'',origin:'',mode:'',cargo:'',region:''});$('#q').value='';$('#origin').value='';['#mode','#cargo'].forEach(id=>[...$(id).children].forEach((x,i)=>x.classList.toggle('on',i===0)));render();return}
+ if(b.id==='reset'){Object.assign(st,{q:'',origin:'',mode:'',cargo:'',region:'',basis:'',stat:''});$('#q').value='';$('#origin').value='';$('#basis').value='';$('#stat').value='';['#mode','#cargo'].forEach(id=>[...$(id).children].forEach((x,i)=>x.classList.toggle('on',i===0)));render();return}
  if(b.id==='print'){print();return}
  st.region=b.dataset.v;render()});
 function match(r){
@@ -1779,56 +2746,117 @@ function match(r){
  if(st.origin&&r.origin!==st.origin)return false;
  if(st.mode&&r.mode!==st.mode)return false;
  if(st.cargo&&r.cargo!==st.cargo)return false;
- if(st.q){const h=(r.city+' '+r.port+' '+r.region+' '+r.lastMile).toLowerCase();if(!h.includes(st.q))return false}
+ if(st.basis&&r.basis!==st.basis)return false;
+ if(st.stat){const s=r._st;if(st.stat==='cur'&&(s.bg||s.expired))return false;if(st.stat==='bg'&&!s.bg)return false;if(st.stat==='exp'&&!s.expired)return false;if(st.stat==='soon'&&!s.soon)return false}
+ if(st.q){const h=(r.city+' '+r.port+' '+r.region+' '+r.route+' '+r.legacyTag).toLowerCase();if(!h.includes(st.q))return false}
  return true}
 function hist(id){return snaps.map(s=>({cycle:s.cycle,p:s.prices[id]})).filter(x=>x.p&&x.p.range)}
 function fmt(n){return n>=100?Math.round(n).toLocaleString('en-US'):(+n.toFixed(2)).toString()}
+// ===== status / basis helpers =====
+const TODAY=new Date(), pad2=n=>String(n).padStart(2,'0'), TODAY_ISO=TODAY.getFullYear()+'-'+pad2(TODAY.getMonth()+1)+'-'+pad2(TODAY.getDate());
+const dayDiff=(a,b)=>Math.round((new Date(a+'T00:00:00')-new Date(b+'T00:00:00'))/864e5);
+function status(r){
+ const s={expired:false,soon:false,bg:r.rtype==='背景参考',why:''};
+ if(r.validEnd){const d=dayDiff(r.validEnd,TODAY_ISO);if(d<0){s.expired=true;s.why='报价有效期已过（到期 '+r.validEnd+'）'}else if(d<=3){s.soon=true;s.why=d===0?'今日到期':d+' 天后到期（'+r.validEnd+'）'}}
+ else if(r.collected&&dayDiff(TODAY_ISO,r.collected)>D.meta.staleDays){s.expired=true;s.why='采集日 '+r.collected+' 起超过 '+D.meta.staleDays+' 天未更新'}
+ return s}
+D.routes.forEach(r=>{r._st=status(r)});
+const BCLS={'公开报价':'b-pub','区域指数':'b-idx','模型估算':'b-mod','待询价':'b-ask','待确认承运':'b-car'};
+function bs(b){return `<span class="bs ${BCLS[b]||''}">${esc(b)}</span>`+(b==='模型估算'?'<span class="est">估算</span>':'')}
+function stBadges(r){const s=r._st;return (s.expired?`<span class="st exp" title="${esc(s.why)}">已过期</span>`:'')+(s.soon?`<span class="st soon" title="${esc(s.why)}">即将到期</span>`:'')+(s.bg?'<span class="st bg" title="年度或未标日期的行业文章，不代表本期运价">背景参考</span>':'')+(!s.expired&&!s.soon&&!s.bg?'<span class="st ok">当期行情</span>':'')}
+const budget='用于内部初步预算。对外提供金额前，核对货物条件、费用范围和有效报价。';
 function spark(id){
  const h=hist(id);
- if(h.length<2){return `<div class="spark"><svg width="110" height="28" viewBox="0 0 110 28" aria-hidden="true"><line x1="4" y1="14" x2="106" y2="14" stroke="#e2e8f0" stroke-dasharray="3 3"/><circle cx="106" cy="14" r="3.5" fill="var(--pri)"/></svg><br>${h.length?esc(h[0].cycle):''} 起每两周累积</div>`}
- const W=110,H=28,mids=h.map(x=>(x.p.range[0]+x.p.range[1])/2),lo=h.map(x=>x.p.range[0]),hi=h.map(x=>x.p.range[1]);
+ if(h.length<2){return `<div class="spark"><span style="font-size:11.5px;color:var(--sub)">尚未形成趋势</span><br>仅 ${h.length} 期，每两周累积</div>`}
+ const W=110,H=28,lo=h.map(x=>x.p.range[0]),hi=h.map(x=>x.p.range[1]);
  const mn=Math.min(...lo),mx=Math.max(...hi)||1,sx=i=>4+i*(W-8)/(h.length-1),sy=v=>H-3-(v-mn)/((mx-mn)||1)*(H-6);
  const band='M'+hi.map((v,i)=>sx(i)+','+sy(v)).join('L')+'L'+lo.map((v,i)=>sx(i)+','+sy(v)).reverse().join('L')+'Z';
- const line='M'+mids.map((v,i)=>sx(i)+','+sy(v)).join('L');
- const d=mids[mids.length-1]/mids[mids.length-2]-1;
- return `<div class="spark"><svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><path d="${band}" fill="#dbe6ff"/><path d="${line}" fill="none" stroke="var(--pri)" stroke-width="1.6"/><circle cx="${sx(h.length-1)}" cy="${sy(mids[mids.length-1])}" r="2.5" fill="var(--pri)"/></svg><br>${h.length}期 · 环比 <span class="${d>0?'up':'down'}">${d>0?'+':''}${(d*100).toFixed(1)}%</span></div>`}
+ const ln=a=>'M'+a.map((v,i)=>sx(i)+','+sy(v)).join('L');
+ const dl=hi[hi.length-1]/hi[hi.length-2]-1,dh=lo[lo.length-1]/lo[lo.length-2]-1;
+ return `<div class="spark"><svg width="${W}" height="${H}" viewBox="0 0 ${W} ${H}"><path d="${band}" fill="#dbe6ff"/><path d="${ln(hi)}" fill="none" stroke="var(--pri)" stroke-width="1.4"/><path d="${ln(lo)}" fill="none" stroke="var(--pri)" stroke-width="1.4" stroke-dasharray="3 2"/></svg><br>${h.length}期 · 上沿 <span class="${dl>0?'up':'down'}">${dl>0?'+':''}${(dl*100).toFixed(1)}%</span> / 下沿 <span class="${dh>0?'up':'down'}">${dh>0?'+':''}${(dh*100).toFixed(1)}%</span></div>`}
+const isTBD=v=>/待核实|待询价|待确认/.test(v||'');
 function card(r){
- const p=latest.prices[r.id]||{text:r.price}, cls=(r.mode==='海运'?'sea':'')+(r.cargo.includes('危')?' dg':'');
- const pt=String(p.text||r.price), main=pt.replace(/（.*?）/,''), ex=(pt.match(/（(.*?)）/)||[])[1];
+ const p=latest.prices[r.id]||{text:r.price}, dg=r.cargo.includes('危'), air=r.mode==='空运', cls=(air?'':'sea')+(dg?' dg':'')+(r._st.expired?' expired':'');
+ const price=r.price||'待询价', basis=r.basis||'待询价';
+ const spec=air?`<div>计费重档<b>${esc(r.tier)}</b></div><div>超尺寸/不可堆叠整机<b>${esc(r.oversize)}</b></div>`:`<div>柜型 / 计费口径<b>${esc(r.equip)}</b></div><div>计费单位<b>${esc(r.unit)}</b></div>`;
+ const full=(r.full||'').replace(/^=\s*/,'');
+ const fullOk=r.full&&r.full.startsWith('=');
+ const inlandNA=(r.inlandCost||'').startsWith('不适用');
  return `<article class="card rc ${cls}">
  <div class="hd"><div><div class="city">${esc(r.city)}</div><div class="lane">${esc(r.origin)}${r.originType==='港口'?'港':'机场'} → ${esc(r.port)}</div></div>
- <div class="tags"><span class="tag reg">${esc(r.region)}</span><span class="tag ${r.mode==='空运'?'air':'sea'}">${r.mode==='空运'?'✈':'🚢'} ${esc(r.mode)}</span><span class="tag ${r.cargo.includes('危')?'dg':''}">${esc(r.cargo)}</span></div></div>
- <div class="price"><div><div style="font-size:11.5px;color:var(--sub)">参考单价</div><span class="p">${esc(main)}</span><span class="u">${esc(r.unit)}</span>${ex?`<div class="ex">${esc(ex)}</div>`:''}</div>${spark(r.id)}</div>
- <div class="meta"><div>参考时效<b>${esc(r.transit)} 天</b></div><div>末段衔接<b>${esc(r.lastMile)}</b></div><div>数据周期<b>${esc(r.cycle)}</b></div></div>
- ${r.season?`<div class="note">📌 ${esc(r.season)} · ${esc(r.note)}</div>`:`<div class="note">📌 ${esc(r.note)}</div>`}
+ <div class="tags"><span class="tag reg">${esc(r.region)}</span><span class="tag ${air?'air':'sea'}">${air?'✈':'🚢'} ${esc(r.mode)}</span><span class="tag ${dg?'dg':''}">${esc(r.cargo)}</span></div></div>
+ <div class="price"><div><div style="font-size:11.5px;color:var(--sub)">${air?'空运':'海运'}主段参考单价${bs(basis)}</div><span class="p">${esc(price)}</span><span class="u">${esc(r.unit)}</span><div class="scope">价格范围：${esc(r.scope)}</div></div>${spark(r.id)}</div>
+ <div class="spec">${spec}</div>
+ <div class="legs">
+  <div class="leg"><h4>① ${air?'空运段':'海运段'}</h4>价格：<b>${esc(price)}</b> ${esc(r.unit)}<br>时效：<b>${esc(r.transit)} 天</b><br><span style="font-size:11px">${esc(r.scope)}</span></div>
+  <div class="leg ${inlandNA?'na':'tbd'}"><h4>② 内陆 / 末段</h4>费用：<b>${esc(r.inlandCost)}</b>${r.inlandBasis&&r.inlandBasis!==r.inlandCost?`<br>依据：<b>${esc(r.inlandBasis)}</b>`:''}<br>时效：<b>${esc(r.inlandTime)}</b></div>
+  <div class="leg ${fullOk?'':'tbd'}"><h4>③ 全程</h4>${fullOk?`<b>${esc(full)}</b>`:`<b>待核实</b><br>${esc(full.replace(/^待核实[（(]?/,'').replace(/[）)]$/,''))}`}${r.legacyTime?`<br><span style="font-size:11px">v1.1 旧口径（含内陆，推算未核实）：${esc(r.legacyTime)} 天，仅供参考</span>`:''}</div>
+ </div>
+ <div class="route"><div>路径<b>${esc(r.route)}</b></div><div>末段方式<b>${esc(r.lastMode)}</b></div><div>时效边界<b>${esc(r.tbound)}</b></div></div>
+ ${r.legacyTag?`<div style="font-size:11.5px;color:var(--sub)">v1.1 原标签：<span class="legacy">${esc(r.legacyTag)}</span></div>`:''}
+ <div class="dates"><div>来源发布日期<b>${esc(r.pub)}</b></div><div>采集日期<b>${esc(r.collected)}</b></div><div>报价有效期<b>${esc(r.validity)}</b></div></div>
+ <div>${stBadges(r)}${r._st.why?`<span style="font-size:11.5px;color:var(--warn);margin-left:6px">${esc(r._st.why)}</span>`:''}${r._st.bg?'<span style="font-size:11.5px;color:var(--sub);margin-left:6px">不代表本期运价</span>':''}</div>
+ ${basis==='模型估算'?`<div class="method"><b>估算方法：</b>${esc(r.method)}</div>`:''}
+ <div class="note">📌 ${esc([r.season,r.note.replace(budget,'').replace(/；\s*$/,'')].filter(Boolean).join(' · '))}</div>
+ <div class="budget">${budget}</div>
  <details class="src"><summary>数据来源</summary><div style="margin-top:6px">${esc(r.source)}</div></details>
 </article>`}
-const cols=[['region','大区'],['origin','起运地'],['city','目的城市'],['port','口岸/机场'],['mode','方式'],['cargo','货型'],['price','参考单价'],['unit','计费单位'],['transit','时效(天)'],['lastMile','末段衔接'],['cycle','数据周期'],['source','数据来源'],['note','备注 / 销售使用说明']];
+const cols=[['region','大区'],['origin','起运地'],['city','目的城市'],['port','口岸/机场'],['mode','方式'],['cargo','货型'],['price','主段参考单价'],['basis','价格依据'],['unit','计费单位'],['tier','重档 / 柜型'],['scope','价格范围'],['transit','主段时效(天)'],['tbound','时效边界'],['route','路径'],['lastMode','末段方式'],['inlandCost','内陆/末段费用'],['inlandTime','内陆/末段时效'],['full','全程'],['_s','数据状态'],['pub','来源发布日期'],['collected','采集日期'],['validity','报价有效期'],['source','数据来源'],['note','备注 / 使用说明']];
+function cell(r,k){
+ switch(k){
+  case 'price':return `<td class="num">${esc(r.price||'待询价')}</td>`;
+  case 'basis':return `<td style="white-space:nowrap">${bs(r.basis||'待询价').replace('margin-left:8px','')}${r.basis==='模型估算'?`<div class="sm" style="font-size:11px;color:var(--sub);white-space:normal;min-width:180px">${esc(r.method)}</div>`:''}</td>`;
+  case 'tier':return `<td class="sm">${esc(r.mode==='空运'?r.tier+'；超尺寸/不可堆叠：'+r.oversize:r.equip)}</td>`;
+  case '_s':return `<td style="white-space:nowrap">${stBadges(r)}</td>`;
+  case 'full':return `<td class="sm">${esc((r.full||'').replace(/^=\s*/,'同主段：').replace(/（主段与内陆.*?）/,''))}</td>`;
+  case 'note':return `<td class="sm">${esc([r.season,r.note].filter(Boolean).join('；'))}</td>`;
+  case 'source':case 'pub':case 'validity':case 'inlandCost':case 'route':case 'scope':case 'tbound':return `<td class="sm">${esc(r[k])}</td>`;
+  default:return `<td>${esc(r[k])}</td>`}}
 function table(rs){
- return `<div class="card tbl"><table><thead><tr>${cols.map(([k,n])=>`<th data-k="${k}">${n}${st.sort===k?(st.asc?' ▲':' ▼'):''}</th>`).join('')}</tr></thead><tbody>${rs.map(r=>`<tr>${cols.map(([k])=>{const v=k==='note'?[r.season,r.note].filter(Boolean).join('；'):r[k];return `<td class="${k==='price'?'num':(k==='source'||k==='note')?'sm':''}">${esc(v)}</td>`}).join('')}</tr>`).join('')}</tbody></table></div>`}
+ return `<div class="card tbl"><table><thead><tr>${cols.map(([k,n])=>`<th data-k="${k}">${n}${st.sort===k?(st.asc?' ▲':' ▼'):''}</th>`).join('')}</tr></thead><tbody>${rs.map(r=>`<tr>${cols.map(([k])=>cell(r,k)).join('')}</tr>`).join('')}</tbody></table></div>`}
 document.addEventListener('click',e=>{const th=e.target.closest('th[data-k]');if(!th)return;const k=th.dataset.k;st.asc=st.sort===k?!st.asc:true;st.sort=k;render()});
 function num(r){const g=(latest.prices[r.id]||{}).range;return g?g[0]:Infinity}
+function sval(r,k){if(k==='price')return num(r);if(k==='_s')return r._st.expired?0:r._st.bg?1:2;if(k==='transit')return parseFloat(r.transit);return r[k]}
+// ===== coverage matrix =====
+const MCOLS=[['空运','整机普货','空运 · 普货'],['空运','整机危险品','空运 · 危险品'],['海运','整机普货','海运 · 普货'],['海运','整机危险品','海运 · 危险品']];
+const PRIO={'公开报价':0,'区域指数':1,'模型估算':2};
+function renderMatrix(){
+ const rows=D.routes.filter(r=>(!st.region||r.region===st.region)&&(!st.q||(r.city+' '+r.port+' '+r.region).toLowerCase().includes(st.q)));
+ const cities=[...new Set(rows.map(r=>r.city))];
+ const reg={};D.routes.forEach(r=>reg[r.city]=r.region);
+ const tot={};let body='';
+ cities.forEach(c=>{
+  body+=`<tr><td><b>${esc(c)}</b></td><td>${esc(reg[c])}</td>`+MCOLS.map(([m,g])=>{
+   const cand=D.routes.filter(r=>r.city===c&&r.mode===m&&r.cargo===g&&(!st.origin||r.origin===st.origin));
+   let b,sub='',inl='';
+   if(cand.length){const best=cand.slice().sort((x,y)=>PRIO[x.basis]-PRIO[y.basis])[0];b=best.basis;sub=st.origin?'':[...new Set(cand.map(r=>r.origin))].join('、');if(cand.some(r=>r.inlandBasis==='待询价'))inl='<i>内陆段待询价</i>'}
+   else b=(m==='空运'&&g.includes('危'))?'待确认承运':'待询价';
+   tot[b]=(tot[b]||0)+1;
+   return `<td class="c">${bs(b).replace('margin-left:8px','')}${sub?`<small>${esc(sub)}</small>`:''}${inl}</td>`}).join('')+'</tr>'});
+ const n=cities.length*4, g=k=>tot[k]||0;
+ $('#mxHint').textContent=(st.origin?'当前起运地：'+st.origin:'全部起运地')+'（随起运地、大区、搜索筛选同步变化）';
+ $('#matrix').innerHTML=`<div class="mxsum">共 ${cities.length} 个目的市场 × 4 类 = ${n} 格：公开报价 <b>${g('公开报价')}</b> · 区域指数 <b>${g('区域指数')}</b> · 模型估算 <b>${g('模型估算')}</b> · 待询价 <b>${g('待询价')}</b> · 待确认承运 <b>${g('待确认承运')}</b>。待询价 / 待确认承运的格子即待补齐线路，可优先向货代实询。</div>
+ <div class="mx"><table><thead><tr><th>目的市场</th><th>大区</th>${MCOLS.map(c=>`<th>${c[2]}</th>`).join('')}</tr></thead><tbody>${body||'<tr><td colspan="6" class="empty">无匹配市场</td></tr>'}</tbody></table></div>
+ <div class="mxsum" style="padding-top:0">说明：单元格取该市场在当前起运地下依据最强的一条线路；「待确认承运」= 空运危险品且无公开数据，须先确认承运人 / 货机是否接受。起运地范围：上海、宁波、郑州、深圳；运输方式 / 货型筛选不影响本表。</div>`}
 function render(){
  renderChips();
  let rs=D.routes.filter(match);
- if(st.sort){rs=rs.slice().sort((a,b)=>{let x=st.sort==='price'?num(a):a[st.sort],y=st.sort==='price'?num(b):b[st.sort];if(st.sort==='transit'){x=parseFloat(x);y=parseFloat(y)}return (x>y?1:x<y?-1:0)*(st.asc?1:-1)})}
- $('#cnt').textContent='共 '+rs.length+' 条';
- const air=rs.filter(r=>r.mode==='空运'),sea=rs.filter(r=>r.mode==='海运'),dg=rs.filter(r=>r.cargo.includes('危'));
+ if(st.sort){rs=rs.slice().sort((a,b)=>{const x=sval(a,st.sort),y=sval(b,st.sort);return (x>y?1:x<y?-1:0)*(st.asc?1:-1)})}
  const cities=new Set(rs.map(r=>r.city)).size;
- const kmin=a=>a.length?Math.min(...a.map(num).filter(isFinite)):null, kmax=a=>a.length?Math.max(...a.map(r=>((latest.prices[r.id]||{}).range||[0,0])[1])):null;
- $('#kpis').innerHTML=`<div class="card kpi"><div class="k">匹配线路 / 目的城市</div><div class="v">${rs.length}<small>条 · ${cities} 城</small></div></div>
- <div class="card kpi"><div class="k">空运参考区间</div><div class="v">${air.length?fmt(kmin(air))+'–'+fmt(kmax(air)):'—'}<small>USD/kg</small></div></div>
- <div class="card kpi"><div class="k">海运拼箱普货区间</div><div class="v">${(a=>a.length?fmt(kmin(a))+'–'+fmt(kmax(a)):'—')(sea.filter(r=>r.unit==='USD/CBM'))}<small>USD/CBM</small></div></div>
- <div class="card kpi"><div class="k">危险品线路</div><div class="v">${dg.length}<small>条（需实询）</small></div></div>`;
+ $('#cnt').textContent='共 '+rs.length+' 条 · '+cities+' 个目的市场';
+ const n=b=>rs.filter(r=>r.basis===b).length, exp=rs.filter(r=>r._st.expired).length, bg=rs.filter(r=>r._st.bg).length, soon=rs.filter(r=>r._st.soon).length, inl=rs.filter(r=>r.inlandBasis==='待询价').length;
+ $('#kpis').innerHTML=`<div class="card kpi"><div class="k">直接公开报价线路</div><div class="v">${n('公开报价')}<small>/ ${rs.length} 条</small></div><div class="s">另有区域指数 ${n('区域指数')} 条</div></div>
+ <div class="card kpi"><div class="k">估算线路（模型估算）</div><div class="v">${n('模型估算')}<small>条</small></div><div class="s">${inl?'另有 '+inl+' 条内陆段待询价':'均已标注估算方法'}</div></div>
+ <div class="card kpi"><div class="k">已过期记录</div><div class="v">${exp}<small>条</small></div><div class="s">背景参考 ${bg} 条${soon?' · 3 天内到期 '+soon+' 条':''}</div></div>
+ <div class="card kpi"><div class="k">最近更新时间</div><div class="v" style="font-size:18px;line-height:1.7">${esc(D.meta.generatedAt)}</div><div class="s">数据周期 ${esc(latest.cycle)} · ${esc(D.meta.cadence)}</div></div>`;
  $('#list').innerHTML=!rs.length?'<div class="card empty">没有匹配的线路。可放宽筛选，或按「新增城市规范」联系物流补充；偏线可参考邻近枢纽行 + 末段衔接估算。</div>':st.view==='table'?table(rs):`<div class="grid">${rs.map(card).join('')}</div>`;
+ renderMatrix();
 }
 // ===== trends =====
+const dotsCount=s=>({d:s.points.filter(p=>!p.derived).length,h:s.points.filter(p=>p.derived).length,l:s.points.filter(p=>p.url).length});
 function chart(s){
  const pts=s.points.slice().sort((a,b)=>a.date<b.date?-1:1);
  const W=380,H=170,L=44,R=12,T=12,B=26;
- if(pts.length<2){
-  const v=pts[0];
-  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(s.name)}"><rect x="${L}" y="${T}" width="${W-L-R}" height="${H-T-B}" fill="#f8fafc" rx="8"/>${v?`<circle cx="${W-R-20}" cy="${H/2}" r="5" fill="${s.color||'#1f5eff'}"/><text x="${W-R-30}" y="${H/2-12}" text-anchor="end" font-size="12" fill="#334155">${esc(v.date)}：${fmt(v.value)}</text>`:''}<text x="${(L+W-R)/2}" y="${H/2+28}" text-anchor="middle" font-size="12" fill="#64748b">仅有已核实单点 · 趋势从 W41 起每两周累积</text></svg>`}
  const t=d=>new Date(d+'T00:00:00Z').getTime(), t0=t(pts[0].date), t1=t(pts[pts.length-1].date);
  const vs=pts.map(p=>p.value); let mn=Math.min(...vs),mx=Math.max(...vs); const pad=(mx-mn)*.12||mx*.05; mn-=pad;mx+=pad;
  const sx=d=>L+(t(d)-t0)/((t1-t0)||1)*(W-L-R), sy=v=>T+(1-(v-mn)/(mx-mn))*(H-T-B);
@@ -1837,24 +2865,30 @@ function chart(s){
  months.forEach(m=>{const iso=m.toISOString().slice(0,10),x=sx(iso);g+=`<line x1="${x}" x2="${x}" y1="${T}" y2="${H-B}" stroke="#f1f5f9"/><text x="${x}" y="${H-8}" text-anchor="middle" font-size="10" fill="#94a3b8">${m.getUTCMonth()+1}月</text>`});
  const c=s.color||'#1f5eff', line=pts.map((p,i)=>(i?'L':'M')+sx(p.date).toFixed(1)+','+sy(p.value).toFixed(1)).join('');
  const area=line+`L${sx(pts[pts.length-1].date)},${H-B}L${sx(pts[0].date)},${H-B}Z`;
- const dots=pts.map(p=>`<circle class="pt" cx="${sx(p.date)}" cy="${sy(p.value)}" r="${pts.length>30?2:3}" fill="#fff" stroke="${c}" stroke-width="1.5" data-t="${esc(p.date)}：${fmt(p.value)} ${esc(s.unit)}${p.note?' · '+esc(p.note):''}"/>`).join('');
+ const dots=pts.map(p=>{
+  const tt=`${esc(p.date)}：${fmt(p.value)} ${esc(s.unit)} · ${p.derived?'反推值（空心点）':'直接公布值（实心点）'}${p.note?' · '+esc(p.note):''} · ${p.url?'点击打开该期出处':'暂无逐点出处链接'}`;
+  const el=`<circle class="pt" cx="${sx(p.date)}" cy="${sy(p.value)}" r="${p.url?4:3.4}" fill="${p.derived?'#fff':c}" stroke="${c}" stroke-width="${p.derived?2:1.5}" data-t="${tt}"/>`;
+  return p.url?`<a href="${esc(p.url)}" target="_blank" rel="noopener">${el}</a>`:el}).join('');
  const id='g'+Math.random().toString(36).slice(2,7);
  return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(s.name)}"><defs><linearGradient id="${id}" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="${c}" stop-opacity=".22"/><stop offset="1" stop-color="${c}" stop-opacity="0"/></linearGradient></defs>${g}<path d="${area}" fill="url(#${id})"/><path d="${line}" fill="none" stroke="${c}" stroke-width="2" stroke-linejoin="round"/>${dots}</svg>`}
 function renderTrends(){
  const S=(D.trends&&D.trends.series)||[];
- $('#trendHint').textContent=D.trends.note||'仅展示经核实的公开数据点；缺失期不插补';
+ $('#trendHint').textContent=D.trends.note||'实心点=直接公布值；空心点=反推值；缺失期不插补';
  if(!S.length){$('#trendGrid').innerHTML='<div class="card empty">趋势从 W41 起每两周累积</div>';return}
- $('#trendGrid').innerHTML=S.map(s=>{const p=s.points.slice().sort((a,b)=>a.date<b.date?-1:1),l=p[p.length-1],f=p[0];const ch=p.length>1?(l.value/f.value-1):null;
-  return `<div class="card tc"><h3>${esc(s.name)}<span class="badge ${p.length<2?'pend':''}">${p.length<2?'单点 · 累积中':'已核实 '+p.length+' 点'}</span></h3><div class="ts">${esc(s.desc||'')}</div>
+ $('#trendGrid').innerHTML=S.map(s=>{const p=s.points.slice().sort((a,b)=>a.date<b.date?-1:1),l=p[p.length-1],f=p[0],n=dotsCount(s);const ch=p.length>1?(l.value/f.value-1):null;
+  const body=p.length<2?`<div class="nt">尚未形成趋势<br>仅 1 个点（${esc(l.date)}：${fmt(l.value)}），每两周累积后显示</div>`:chart(s);
+  return `<div class="card tc"><h3>${esc(s.name)}<span class="badge ${p.length<2?'pend':''}">${p.length<2?'单点 · 累积中':'直接公布 '+n.d+' 点'}</span>${n.h?`<span class="badge pend">反推 ${n.h} 点</span>`:''}</h3><div class="ts">${esc(s.desc||'')}</div>
   <div class="last"><b>${l?fmt(l.value):'—'}</b><span style="color:var(--sub);font-size:12px">${esc(s.unit)} · ${l?esc(l.date):''}</span>${ch!=null?`<span class="chg ${ch>0?'up':'down'}">较 ${esc(f.date.slice(5))} ${ch>0?'+':''}${(ch*100).toFixed(1)}%</span>`:''}</div>
-  ${chart(s)}<div class="foot">来源：${esc(s.source)}${s.url?` · <a href="${esc(s.url)}" target="_blank" rel="noopener">链接</a>`:''}${s.caveat?'<br>'+esc(s.caveat):''}</div></div>`}).join('');
+  ${body}
+  <div class="dl"><span><i class="f"></i>直接公布 ${n.d} 点</span><span><i class="h"></i>反推 ${n.h} 点</span><span>${n.l?`${n.l} 个点可打开具体出处`:'暂无逐点出处链接（待补）'}</span></div>
+  <div class="foot">来源：${esc(s.source)}${s.url?` · <a href="${esc(s.url)}" target="_blank" rel="noopener">${esc(s.seriesUrlNote||'系列出处')}</a>`:''}${s.seriesUrlNote&&!s.url?'<br>'+esc(s.seriesUrlNote):''}${s.caveat?'<br>'+esc(s.caveat):''}</div></div>`}).join('');
  $('#trendSrc').innerHTML='<b>趋势数据来源：</b>'+S.map(s=>esc(s.name)+'（'+esc(s.source)+'）').join('；');
 }
 document.addEventListener('mousemove',e=>{const p=e.target.closest&&e.target.closest('.pt');if(p)showTip(e,p.dataset.t);else hideTip()});
 // about
 const kv=a=>a.map(r=>`<dt>${esc(r[0])}</dt><dd>${esc(r[1])}</dd>`).join('');
 $('#usage').innerHTML=kv(D.about.usage);
-$('#rules').innerHTML=kv(D.about.rules.concat(D.about.fields.filter(f=>['参考单价','末段衔接'].includes(f[0])).map(f=>['字段·'+f[0],f[1]])));
+$('#rules').innerHTML=kv(D.about.rules.concat(D.about.fields.filter(f=>['参考单价','原末段衔接标签(v1.1)','价格依据','路径','末段方式','时效边界','全程'].includes(f[0])).map(f=>['字段·'+f[0],f[1]])));
 $('#gaps').innerHTML=D.about.gaps.map(g=>`<li>${esc(g.replace(/^\d+\.\s*/,''))}</li>`).join('');
 $('#srcs').innerHTML=D.about.sources.map(r=>`<tr>${r.map(c=>`<td>${esc(c)}</td>`).join('')}</tr>`).join('');
 render();renderTrends();
