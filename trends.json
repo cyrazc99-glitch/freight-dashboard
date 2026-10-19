@@ -101,6 +101,13 @@
      "date": "2026-10-09",
      "value": 3455,
      "derived": false
+    },
+    {
+     "date": "2026-10-16",
+     "value": 3547,
+     "derived": false,
+     "url": "https://www.cmoney.tw/forum/article/186068608",
+     "note": "10-16 起上海航交所正式发布欧洲 40 尺指数"
     }
    ],
    "seriesUrlNote": "系列级出处为搜索页，非具体文章；逐点文章链接待补"
@@ -205,6 +212,13 @@
      "date": "2026-10-09",
      "value": 3790,
      "derived": false
+    },
+    {
+     "date": "2026-10-16",
+     "value": 4097,
+     "derived": false,
+     "url": "https://www.cmoney.tw/forum/article/186068608",
+     "note": "10-16 起上海航交所正式发布地中海 40 尺指数"
     }
    ],
    "seriesUrlNote": "系列级出处为搜索页，非具体文章；逐点文章链接待补"
