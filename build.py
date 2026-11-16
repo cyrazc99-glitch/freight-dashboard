@@ -1,7 +1,7 @@
-# Generator: reads 运价看板_v1.3.xlsx + trends.json -> index.html (self-contained, public data only)
+# Generator: reads 运价看板_v1.4.xlsx + trends.json -> index.html (self-contained, public data only)
 import openpyxl, json, re, os, datetime
 D=os.path.dirname(os.path.abspath(__file__))
-XLSX='/workspace/运价看板_v1.3.xlsx'
+XLSX='/workspace/运价看板_v1.4.xlsx'
 wb=openpyxl.load_workbook(XLSX,data_only=True)
 ws=wb['运价看板']
 rows=list(ws.iter_rows(values_only=True))
@@ -38,11 +38,11 @@ if '历史记录' in wb.sheetnames:
         c=byc.setdefault(r[hi['数据周期']],{'cycle':r[hi['数据周期']],'date':str(r[hi['快照日期']]),'prices':{}})
         c['prices'][r[hi['线路ID']]]={'range':rng(r[hi['参考单价']]),'text':str(r[hi['参考单价']] or ''),'basis':str(r[hi['价格依据']] or '')}
     snapshots=sorted(byc.values(),key=lambda x:x['cycle'])
-if not snapshots: snapshots=[{'cycle':'2026-W43','date':'2026-10-16','prices':prices}]
+if not snapshots: snapshots=[{'cycle':'2026-W45','date':'2026-10-30','prices':prices}]
 trends=json.load(open(os.path.join(D,'trends.json'),encoding='utf-8'))
 now=datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=8)))
 data={
- 'meta':{'title':'出口运价参考看板','version':'v1.3','cycle':'2026-W43','cycleRange':'约 2026-10-13～10-19（SCFI 10-16；空运牌价至 10-21～10-23）','cadence':'每两周更新',
+ 'meta':{'title':'出口运价参考看板','version':'v1.4','cycle':'2026-W45','cycleRange':'约 2026-10-20～11-01（SCFI 10-30；Freightos 周报 10-27；Santos 10-23）','cadence':'每两周更新',
   'generated':now.strftime('%Y-%m-%d'),'generatedAt':now.strftime('%Y-%m-%d %H:%M')+' (UTC+8)','staleDays':28},
  'routes':routes,
  # Append a new object here each cycle (same route ids) -> sparklines extend automatically
